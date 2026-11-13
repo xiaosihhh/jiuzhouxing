@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.is.autonavi.com; connect-src 'self'; object-src 'none'; base-uri 'self'" />
+  <title>中国城市库 · 九州行</title>
+  <meta name="description" content="中国城市分类浏览 — 按区域与省份分类存放的中国旅行城市库，每城含经典景点与门票参考。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="js/vendor/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">九州行</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#destinations">精选目的地</a>
+        <a href="index.html#mapview">地图</a>
+        <a href="cities.html" class="active">中国城市库</a>
+        <a href="hotel.html">酒店探索</a>
+        <a href="community.html">热门城市分享</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="切换深色模式" title="切换深色模式">
+          <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+        </button>
+        <a href="index.html" class="btn-accent btn-sm">返回主页 →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero ch-hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="eyebrow">CHINA CITY LIBRARY</span>
+      <h1 class="hero-title">中国城市库<br/><span class="grad">分区分类 · 经典细化</span></h1>
+      <p class="hero-sub">锦绣中华，一城一景 — <b id="chStat">…</b> 个省区市的 <b id="chCityStat">…</b> 座城市分类存放，每座城市附<b>经典景点与门票参考</b>，逐层展开浏览。</p>
+      <div class="hero-cta">
+        <a href="#lib" class="btn-accent">开始探索</a>
+        <a href="index.html" class="btn-ghost">← 返回精选主页</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 工具栏 -->
+  <section class="ch-toolbar" id="lib">
+    <div class="ch-tools-inner">
+      <div class="ch-search">
+        <span class="ch-search-ico">⌕</span>
+        <input id="chSearch" type="text" aria-label="搜索城市、省份或景点" placeholder="搜索城市 / 省份 / 景点，如：喀什、山西、莫高窟…" autocomplete="off" />
+        <button id="chClear" class="ch-clear" type="button" aria-label="清除搜索" hidden>✕</button>
+      </div>
+      <div class="ch-tabs" id="chTabs">
+        <button class="ch-tab active" type="button" data-c="全部" aria-selected="true">🧭 全部</button>
+        <button class="ch-tab" type="button" data-c="华北" aria-selected="false">🏔 华北</button>
+        <button class="ch-tab" type="button" data-c="华东" aria-selected="false">🌸 华东</button>
+        <button class="ch-tab" type="button" data-c="华南" aria-selected="false">🌴 华南</button>
+        <button class="ch-tab" type="button" data-c="华中" aria-selected="false">🏞 华中</button>
+        <button class="ch-tab" type="button" data-c="西南" aria-selected="false">🏔 西南</button>
+        <button class="ch-tab" type="button" data-c="西北" aria-selected="false">🏜 西北</button>
+        <button class="ch-tab" type="button" data-c="东北" aria-selected="false">❄️ 东北</button>
+        <button class="ch-tab" type="button" data-c="港澳台" aria-selected="false">🌏 港澳台</button>
+        <button class="ch-tab" type="button" data-view="5a" aria-pressed="false">🏅 5A 名录</button>
+        <button class="ch-tab" type="button" data-view="must" aria-pressed="false">🔥 必打卡</button>
+        <button class="ch-tab" type="button" data-view="map" aria-pressed="false">🗺 地图</button>
+        <button class="ch-tab ch-only" id="chOnly" type="button" aria-pressed="false">★ 只看精选</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- 地图视图（Leaflet · 高德瓦片 · 城市/5A/必打卡三模式） -->
+  <section id="chMapWrap" class="ch-map-wrap" hidden>
+    <div id="chMap" class="ch-map"></div>
+    <div class="ch-map-legend">
+      <span><i class="lg lg-full"></i>精选城市</span>
+      <span><i class="lg lg-must"></i>必打卡榜</span>
+      <span><i class="lg lg-normal"></i>其他城市</span>
+      <small>点击标记查看城市详情 · 滚轮缩放 · 拖动平移</small>
+    </div>
+  </section>
+
+  <!-- 城市库主体（区域 → 省份折叠 → 城市网格，懒渲染） -->
+  <main class="ch-body" id="chBody"></main>
+
+  <!-- 城市详情弹窗 -->
+  <div id="chModal" class="modal" role="dialog" aria-modal="true" aria-label="城市详情" hidden>
+    <div class="modal-backdrop" data-ch-close></div>
+    <div class="modal-card ch-modal-card">
+      <button class="modal-close" data-ch-close aria-label="关闭">✕</button>
+      <div class="ch-modal-body" id="chModalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer class="footer">
+    <p>九州行 · 中国城市库 — 覆盖八大区域，每城含经典景点与门票参考</p>
+  </footer>
+
+  <script src="js/vendor/leaflet.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/scenic.js"></script>
+  <script src="js/scenic-detail.js"></script>
+  <script src="js/cities-app.js"></script>
+  <script src="js/companion.js"></script>
+</body>
+</html>

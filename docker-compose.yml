@@ -1,0 +1,50 @@
+services:
+  app:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      PORT: "8000"
+      DATABASE_URL: "mysql://${MYSQL_USER:-jiuzhou}:${MYSQL_PASSWORD:-jiuzhou_dev}@mysql:3306/${MYSQL_DATABASE:-jiuzhou}?charset=utf8mb4"
+      REDIS_URL: "redis://redis:6379/0"
+      AGENT_API_URL: "${AGENT_API_URL:-}"
+      AGENT_API_KEY: "${AGENT_API_KEY:-}"
+      AGENT_MODEL: "${AGENT_MODEL:-default}"
+    depends_on:
+      mysql:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+    restart: unless-stopped
+
+  mysql:
+    image: mysql:8.4
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD:-root_dev_only}"
+      MYSQL_DATABASE: "${MYSQL_DATABASE:-jiuzhou}"
+      MYSQL_USER: "${MYSQL_USER:-jiuzhou}"
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD:-jiuzhou_dev}"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-p${MYSQL_ROOT_PASSWORD:-root_dev_only}"]
+      interval: 10s
+      timeout: 5s
+      retries: 12
+    restart: unless-stopped
+
+  redis:
+    image: redis:7-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis_data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 12
+    restart: unless-stopped
+
+volumes:
+  mysql_data:
+  redis_data:

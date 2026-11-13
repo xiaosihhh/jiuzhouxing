@@ -1,0 +1,41 @@
+[
+  {
+    "id": "efea64d6-2e25-45bc-8ffb-0a520e53b82c",
+    "accountId": "JZX-5LD3JBHV",
+    "nickname": "九州行官方",
+    "city": "壮美中国",
+    "caption": "从田野到群山，再到跨海长桥：第一支社区旅行短片，带你一眼看见中国的辽阔与浪漫。",
+    "media": [
+      {
+        "key": "community/2026-11-10/4ada4088-678e-46eb-80f6-17b65b3dbf0b.mp4",
+        "url": "/api/community/media/obs?key=community%2F2026-11-10%2F4ada4088-678e-46eb-80f6-17b65b3dbf0b.mp4",
+        "storage": "obs",
+        "type": "video/mp4",
+        "poster": "/assets/cities/%E5%8C%97%E4%BA%AC.webp"
+      }
+    ],
+    "likes": [
+      "JZX-5D6TACEC"
+    ],
+    "favorites": [
+      "JZX-5D6TACEC"
+    ],
+    "comments": [
+      {
+        "id": "9a7bd62a-2af6-4c4b-ae13-88bb6bf51542",
+        "accountId": "JZX-TOUR0001",
+        "nickname": "九州行官方",
+        "text": "首支社区旅行短片已上线，欢迎分享你镜头里的中国。",
+        "createdAt": "2026-11-10T12:00:00.000Z"
+      },
+      {
+        "id": "c927087b-4f02-4332-886f-6f7b19ec6852",
+        "accountId": "JZX-5D6TACEC",
+        "nickname": "旅行者 9586",
+        "text": "美！",
+        "createdAt": "2026-11-10T12:25:48.542Z"
+      }
+    ],
+    "createdAt": "2026-11-10T11:19:36.567Z"
+  }
+]

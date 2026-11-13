@@ -1,0 +1,36 @@
+# Local secrets and environment configuration
+.env
+.env.*
+!.env.example
+
+# Runtime and user data
+node_modules/
+data/users.json
+data/conversations.jsonl
+data/trips.json
+*.log
+
+# Local versions, caches and temporary files
+versions/
+backups/
+temp/
+tmp/
+tmp-*
+*.tmp
+.cache/
+coverage/
+__pycache__/
+*.pyc
+$null
+.merkle-snapshot.json
+
+# CodeArts local indexes and machine-specific state
+.codeartsdoer/.codebase/
+.codeartsdoer/mem-exp-config.json
+.codeartsdoer/mcp/mcp_settings.json
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

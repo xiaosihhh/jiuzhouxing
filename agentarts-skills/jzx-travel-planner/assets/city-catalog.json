@@ -1,0 +1,1887 @@
+[
+  {
+    "id": "beijing",
+    "name": "北京",
+    "city": "北京",
+    "region": "华北",
+    "price": 3580,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "都市"
+    ],
+    "bestSeason": "秋季",
+    "popular": true,
+    "highlights": [
+      "故宫博物院",
+      "八达岭长城",
+      "颐和园",
+      "天坛公园",
+      "天安门广场",
+      "圆明园",
+      "恭王府",
+      "雍和宫"
+    ]
+  },
+  {
+    "id": "shanghai",
+    "name": "上海",
+    "city": "上海",
+    "region": "华东",
+    "price": 3280,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "都市",
+      "夜景"
+    ],
+    "bestSeason": "春季",
+    "popular": true,
+    "highlights": [
+      "外滩",
+      "东方明珠",
+      "豫园",
+      "上海迪士尼",
+      "武康路·梧桐区",
+      "上海博物馆",
+      "朱家角"
+    ]
+  },
+  {
+    "id": "xian",
+    "name": "西安",
+    "city": "西安",
+    "region": "西北",
+    "price": 2880,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "世界遗产"
+    ],
+    "bestSeason": "秋季",
+    "popular": true,
+    "highlights": [
+      "兵马俑",
+      "西安城墙",
+      "大唐不夜城",
+      "陕西历史博物馆",
+      "华清宫",
+      "华山"
+    ]
+  },
+  {
+    "id": "chengdu",
+    "name": "成都",
+    "city": "成都",
+    "region": "西南",
+    "price": 2680,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "美食",
+      "休闲",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": true,
+    "highlights": [
+      "大熊猫繁育研究基地",
+      "都江堰",
+      "青城山",
+      "武侯祠·锦里",
+      "杜甫草堂",
+      "宽窄巷子"
+    ]
+  },
+  {
+    "id": "chongqing",
+    "name": "重庆",
+    "city": "重庆",
+    "region": "西南",
+    "price": 2680,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "美食",
+      "夜景",
+      "都市"
+    ],
+    "bestSeason": "秋季",
+    "popular": true,
+    "highlights": [
+      "洪崖洞",
+      "长江索道",
+      "磁器口",
+      "武隆天生三桥",
+      "两江夜游",
+      "李子坝轻轨穿楼"
+    ]
+  },
+  {
+    "id": "hangzhou",
+    "name": "杭州",
+    "city": "杭州",
+    "region": "华东",
+    "price": 2580,
+    "duration": 3,
+    "rating": 4.7,
+    "tags": [
+      "自然",
+      "人文古迹"
+    ],
+    "bestSeason": "春季",
+    "popular": true,
+    "highlights": [
+      "西湖",
+      "灵隐寺",
+      "西溪湿地",
+      "千岛湖",
+      "宋城+千古情",
+      "河坊街"
+    ]
+  },
+  {
+    "id": "sanya",
+    "name": "三亚",
+    "city": "三亚",
+    "region": "华南",
+    "price": 3880,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "冬季",
+    "popular": true,
+    "highlights": [
+      "亚龙湾",
+      "蜈支洲岛",
+      "天涯海角",
+      "南山文化旅游区",
+      "三亚千古情"
+    ]
+  },
+  {
+    "id": "lasa",
+    "name": "拉萨",
+    "city": "拉萨",
+    "region": "西南",
+    "price": 4580,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "自然",
+      "人文古迹",
+      "世界遗产"
+    ],
+    "bestSeason": "夏季",
+    "popular": true,
+    "highlights": [
+      "布达拉宫",
+      "大昭寺",
+      "八廓街",
+      "罗布林卡"
+    ]
+  },
+  {
+    "id": "wulumuqi",
+    "name": "乌鲁木齐",
+    "city": "乌鲁木齐",
+    "region": "西北",
+    "price": 3680,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "秋季",
+    "popular": true,
+    "highlights": [
+      "天山天池",
+      "新疆国际大巴扎",
+      "红山公园"
+    ]
+  },
+  {
+    "id": "city-1ft8k1m",
+    "name": "安顺",
+    "city": "安顺",
+    "region": "西南",
+    "price": 2990,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "黄果树瀑布",
+      "龙宫",
+      "陡坡塘·天星桥"
+    ]
+  },
+  {
+    "id": "city-144k9b2",
+    "name": "澳门",
+    "city": "澳门",
+    "region": "港澳台",
+    "price": 3740,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "大三巴牌坊",
+      "澳门塔",
+      "威尼斯人度假区",
+      "官也街"
+    ]
+  },
+  {
+    "id": "city-1ik7ak3",
+    "name": "北海",
+    "city": "北海",
+    "region": "华南",
+    "price": 3410,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "北海银滩",
+      "涠洲岛",
+      "鳄鱼山火山公园"
+    ]
+  },
+  {
+    "id": "city-1j1yj3x",
+    "name": "潮州",
+    "city": "潮州",
+    "region": "华南",
+    "price": 3050,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "美食"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "牌坊街·广济桥",
+      "开元寺",
+      "韩文公祠"
+    ]
+  },
+  {
+    "id": "city-3rqvej",
+    "name": "承德",
+    "city": "承德",
+    "region": "华北",
+    "price": 2850,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "避暑山庄",
+      "普陀宗乘之庙",
+      "磬锤峰"
+    ]
+  },
+  {
+    "id": "city-1i4br1v",
+    "name": "池州",
+    "city": "池州",
+    "region": "华东",
+    "price": 2970,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "九华山",
+      "花台索道",
+      "杏花村"
+    ]
+  },
+  {
+    "id": "city-1fknscg",
+    "name": "大理",
+    "city": "大理",
+    "region": "西南",
+    "price": 2450,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "洱海环湖",
+      "苍山索道",
+      "大理古城",
+      "崇圣寺三塔"
+    ]
+  },
+  {
+    "id": "city-4uw348",
+    "name": "大连",
+    "city": "大连",
+    "region": "东北",
+    "price": 2690,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "星海广场",
+      "老虎滩海洋公园",
+      "滨海路",
+      "金石滩",
+      "俄罗斯风情街"
+    ]
+  },
+  {
+    "id": "city-1ieikn2",
+    "name": "大同",
+    "city": "大同",
+    "region": "华北",
+    "price": 2940,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "云冈石窟",
+      "悬空寺",
+      "大同古城墙",
+      "华严寺"
+    ]
+  },
+  {
+    "id": "city-1eketmg",
+    "name": "丹东",
+    "city": "丹东",
+    "region": "东北",
+    "price": 2690,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "鸭绿江断桥",
+      "虎山长城",
+      "凤凰山"
+    ]
+  },
+  {
+    "id": "city-xrgn7g",
+    "name": "稻城",
+    "city": "稻城",
+    "region": "西南",
+    "price": 2630,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "亚丁景区",
+      "牛奶海",
+      "冲古寺"
+    ]
+  },
+  {
+    "id": "city-9h8pxr",
+    "name": "敦煌",
+    "city": "敦煌",
+    "region": "西北",
+    "price": 3310,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "莫高窟",
+      "鸣沙山月牙泉",
+      "玉门关",
+      "敦煌古城"
+    ]
+  },
+  {
+    "id": "city-1yg3ddn",
+    "name": "恩施",
+    "city": "恩施",
+    "region": "华中",
+    "price": 2570,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "恩施大峡谷",
+      "屏山峡谷",
+      "梭布垭石林"
+    ]
+  },
+  {
+    "id": "city-gls3p5",
+    "name": "凤凰",
+    "city": "凤凰",
+    "region": "华中",
+    "price": 2570,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "凤凰古城",
+      "沱江泛舟",
+      "南方长城"
+    ]
+  },
+  {
+    "id": "city-18e9uxs",
+    "name": "福州",
+    "city": "福州",
+    "region": "华东",
+    "price": 3420,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "三坊七巷",
+      "鼓山",
+      "西湖公园"
+    ]
+  },
+  {
+    "id": "city-t2xmu1",
+    "name": "高雄",
+    "city": "高雄",
+    "region": "港澳台",
+    "price": 3830,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "驳二艺术特区",
+      "旗津半岛",
+      "莲池潭·龙虎塔"
+    ]
+  },
+  {
+    "id": "city-4d76eo",
+    "name": "广州",
+    "city": "广州",
+    "region": "华南",
+    "price": 3320,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "广州塔",
+      "沙面",
+      "陈家祠",
+      "白云山",
+      "永庆坊"
+    ]
+  },
+  {
+    "id": "city-bblx7d",
+    "name": "贵阳",
+    "city": "贵阳",
+    "region": "西南",
+    "price": 2540,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "黔灵山公园",
+      "甲秀楼",
+      "青岩古镇"
+    ]
+  },
+  {
+    "id": "city-j0kvh2",
+    "name": "桂林",
+    "city": "桂林",
+    "region": "华南",
+    "price": 2960,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "漓江竹筏",
+      "象鼻山",
+      "龙脊梯田",
+      "两江四湖"
+    ]
+  },
+  {
+    "id": "city-fgqf4z",
+    "name": "哈尔滨",
+    "city": "哈尔滨",
+    "region": "东北",
+    "price": 2240,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "中央大街",
+      "圣索菲亚教堂",
+      "冰雪大世界",
+      "太阳岛"
+    ]
+  },
+  {
+    "id": "city-1bn05sf",
+    "name": "海口",
+    "city": "海口",
+    "region": "华南",
+    "price": 2870,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "骑楼老街",
+      "火山口地质公园",
+      "假日海滩"
+    ]
+  },
+  {
+    "id": "city-54klrr",
+    "name": "呼和浩特",
+    "city": "呼和浩特",
+    "region": "华北",
+    "price": 3210,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "大召寺",
+      "内蒙古博物院",
+      "席力图召",
+      "希拉穆仁草原一日"
+    ]
+  },
+  {
+    "id": "city-1wibk1a",
+    "name": "呼伦贝尔",
+    "city": "呼伦贝尔",
+    "region": "华北",
+    "price": 3120,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "呼伦贝尔大草原",
+      "额尔古纳湿地",
+      "满洲里国门",
+      "莫日格勒河"
+    ]
+  },
+  {
+    "id": "city-1jtqo5i",
+    "name": "黄山",
+    "city": "黄山",
+    "region": "华东",
+    "price": 2880,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "黄山风景区",
+      "宏村",
+      "西递",
+      "屯溪老街"
+    ]
+  },
+  {
+    "id": "city-1wtxpte",
+    "name": "济南",
+    "city": "济南",
+    "region": "华东",
+    "price": 3420,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "趵突泉",
+      "大明湖",
+      "千佛山",
+      "芙蓉街"
+    ]
+  },
+  {
+    "id": "city-1fcbxm8",
+    "name": "嘉兴",
+    "city": "嘉兴",
+    "region": "华东",
+    "price": 2880,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "乌镇西栅",
+      "西塘",
+      "南湖",
+      "盐官观潮"
+    ]
+  },
+  {
+    "id": "city-1yz57fx",
+    "name": "九寨沟",
+    "city": "九寨沟",
+    "region": "西南",
+    "price": 2900,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "九寨沟",
+      "黄龙",
+      "牟尼沟"
+    ]
+  },
+  {
+    "id": "kanasi",
+    "name": "喀纳斯",
+    "city": "喀纳斯",
+    "region": "西北",
+    "price": 4680,
+    "duration": 6,
+    "rating": 4.8,
+    "tags": [
+      "自然",
+      "摄影"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "喀纳斯湖",
+      "禾木村",
+      "观鱼台"
+    ]
+  },
+  {
+    "id": "city-g7m0lp",
+    "name": "喀什",
+    "city": "喀什",
+    "region": "西北",
+    "price": 2590,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "喀什古城",
+      "艾提尕尔清真寺",
+      "白沙湖"
+    ]
+  },
+  {
+    "id": "city-u2jltm",
+    "name": "开封",
+    "city": "开封",
+    "region": "华中",
+    "price": 3020,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "清明上河园",
+      "开封府",
+      "大相国寺"
+    ]
+  },
+  {
+    "id": "city-1bs4jit",
+    "name": "昆明",
+    "city": "昆明",
+    "region": "西南",
+    "price": 2900,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "滇池·海埂公园",
+      "石林",
+      "云南民族村"
+    ]
+  },
+  {
+    "id": "city-sqgdur",
+    "name": "兰州",
+    "city": "兰州",
+    "region": "西北",
+    "price": 2950,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "中山桥·黄河风情线",
+      "甘肃省博物馆",
+      "白塔山"
+    ]
+  },
+  {
+    "id": "city-1rvbc2i",
+    "name": "乐山",
+    "city": "乐山",
+    "region": "西南",
+    "price": 2630,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "乐山大佛",
+      "峨眉山",
+      "嘉定坊"
+    ]
+  },
+  {
+    "id": "city-1x26t91",
+    "name": "丽江",
+    "city": "丽江",
+    "region": "西南",
+    "price": 2540,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "丽江古城",
+      "玉龙雪山",
+      "束河古镇",
+      "蓝月谷"
+    ]
+  },
+  {
+    "id": "city-p4y47l",
+    "name": "林芝",
+    "city": "林芝",
+    "region": "西南",
+    "price": 2900,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "雅鲁藏布大峡谷",
+      "南迦巴瓦峰",
+      "巴松措"
+    ]
+  },
+  {
+    "id": "city-s3i9kb",
+    "name": "洛阳",
+    "city": "洛阳",
+    "region": "华中",
+    "price": 3110,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "龙门石窟",
+      "白马寺",
+      "洛阳博物馆",
+      "老君山"
+    ]
+  },
+  {
+    "id": "city-1uwrh2c",
+    "name": "漠河",
+    "city": "漠河",
+    "region": "东北",
+    "price": 2690,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "北极村",
+      "北红村",
+      "龙江第一湾"
+    ]
+  },
+  {
+    "id": "city-sroagg",
+    "name": "牡丹江",
+    "city": "牡丹江",
+    "region": "东北",
+    "price": 2690,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "中国雪乡",
+      "镜泊湖",
+      "雪谷"
+    ]
+  },
+  {
+    "id": "city-17ha4ni",
+    "name": "南京",
+    "city": "南京",
+    "region": "华东",
+    "price": 2700,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "中山陵",
+      "夫子庙·秦淮河",
+      "明孝陵",
+      "总统府",
+      "南京博物院",
+      "玄武湖"
+    ]
+  },
+  {
+    "id": "city-xsu1v9",
+    "name": "南宁",
+    "city": "南宁",
+    "region": "华南",
+    "price": 3230,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "青秀山",
+      "广西民族博物馆",
+      "中山路夜市"
+    ]
+  },
+  {
+    "id": "city-s6nreh",
+    "name": "南投",
+    "city": "南投",
+    "region": "港澳台",
+    "price": 3650,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "日月潭",
+      "清境农场",
+      "缆车观湖"
+    ]
+  },
+  {
+    "id": "city-1721let",
+    "name": "平遥",
+    "city": "平遥",
+    "region": "华北",
+    "price": 2850,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "平遥古城通票",
+      "日升昌票号",
+      "又见平遥演出"
+    ]
+  },
+  {
+    "id": "city-7b6qyb",
+    "name": "秦皇岛",
+    "city": "秦皇岛",
+    "region": "华北",
+    "price": 2850,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "山海关天下第一关",
+      "老龙头",
+      "北戴河海滩",
+      "鸽子窝公园"
+    ]
+  },
+  {
+    "id": "city-kl2xyi",
+    "name": "青岛",
+    "city": "青岛",
+    "region": "华东",
+    "price": 3420,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "栈桥",
+      "八大关",
+      "崂山",
+      "青岛啤酒博物馆",
+      "金沙滩"
+    ]
+  },
+  {
+    "id": "city-z6gy34",
+    "name": "青海湖",
+    "city": "青海湖",
+    "region": "西北",
+    "price": 3220,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "青海湖二郎剑",
+      "茶卡盐湖",
+      "祁连卓尔山"
+    ]
+  },
+  {
+    "id": "city-1oef63v",
+    "name": "曲阜",
+    "city": "曲阜",
+    "region": "华东",
+    "price": 3510,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "三孔联票",
+      "孔府",
+      "尼山圣境"
+    ]
+  },
+  {
+    "id": "city-nn90df",
+    "name": "厦门",
+    "city": "厦门",
+    "region": "华东",
+    "price": 2970,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "鼓浪屿",
+      "南普陀寺",
+      "环岛路",
+      "曾厝垵",
+      "厦门大学"
+    ]
+  },
+  {
+    "id": "city-trhsn1",
+    "name": "深圳",
+    "city": "深圳",
+    "region": "华南",
+    "price": 3050,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "世界之窗",
+      "大梅沙海滨公园",
+      "深圳湾公园",
+      "甘坑客家小镇",
+      "欢乐港湾·湾区之光"
+    ]
+  },
+  {
+    "id": "city-1p772oc",
+    "name": "沈阳",
+    "city": "沈阳",
+    "region": "东北",
+    "price": 2870,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "沈阳故宫",
+      "张氏帅府",
+      "北陵公园",
+      "九一八历史博物馆"
+    ]
+  },
+  {
+    "id": "city-5ovpo4",
+    "name": "十堰",
+    "city": "十堰",
+    "region": "华中",
+    "price": 3020,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "武当山",
+      "金顶",
+      "紫霄宫"
+    ]
+  },
+  {
+    "id": "city-1eqd1cw",
+    "name": "苏州",
+    "city": "苏州",
+    "region": "华东",
+    "price": 3060,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "拙政园",
+      "苏州博物馆",
+      "虎丘",
+      "平江路",
+      "周庄",
+      "寒山寺"
+    ]
+  },
+  {
+    "id": "city-e3fox4",
+    "name": "台北",
+    "city": "台北",
+    "region": "港澳台",
+    "price": 3920,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "美食"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "台北101",
+      "故宫博物院",
+      "士林夜市",
+      "九份老街"
+    ]
+  },
+  {
+    "id": "city-5k31ty",
+    "name": "太原",
+    "city": "太原",
+    "region": "华北",
+    "price": 2580,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "晋祠",
+      "山西博物院",
+      "蒙山大佛",
+      "柳巷食品街"
+    ]
+  },
+  {
+    "id": "city-1woywia",
+    "name": "泰安",
+    "city": "泰安",
+    "region": "华东",
+    "price": 3240,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "泰山",
+      "岱庙",
+      "泰山日出"
+    ]
+  },
+  {
+    "id": "city-on704z",
+    "name": "天津",
+    "city": "天津",
+    "region": "华北",
+    "price": 2670,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "五大道",
+      "天津之眼",
+      "古文化街",
+      "瓷房子",
+      "意式风情区",
+      "盘山"
+    ]
+  },
+  {
+    "id": "city-oc057y",
+    "name": "铜仁",
+    "city": "铜仁",
+    "region": "西南",
+    "price": 2630,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "梵净山",
+      "蘑菇石",
+      "寨沙侗寨"
+    ]
+  },
+  {
+    "id": "city-9o7a74",
+    "name": "吐鲁番",
+    "city": "吐鲁番",
+    "region": "西北",
+    "price": 3040,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "葡萄沟",
+      "火焰山",
+      "坎儿井"
+    ]
+  },
+  {
+    "id": "city-4diat6",
+    "name": "无锡",
+    "city": "无锡",
+    "region": "华东",
+    "price": 2700,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "鼋头渚",
+      "灵山大佛",
+      "拈花湾",
+      "南长街"
+    ]
+  },
+  {
+    "id": "city-m7ixuw",
+    "name": "五台山",
+    "city": "五台山",
+    "region": "华北",
+    "price": 2580,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "五台山进山费",
+      "显通寺",
+      "菩萨顶",
+      "五爷庙"
+    ]
+  },
+  {
+    "id": "city-6tewkw",
+    "name": "武汉",
+    "city": "武汉",
+    "region": "华中",
+    "price": 3020,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "黄鹤楼",
+      "东湖",
+      "湖北省博物馆",
+      "户部巷",
+      "武汉大学樱花"
+    ]
+  },
+  {
+    "id": "city-14ve7sx",
+    "name": "武夷山",
+    "city": "武夷山",
+    "region": "华东",
+    "price": 2970,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "武夷山景区",
+      "九曲溪竹筏",
+      "印象大红袍"
+    ]
+  },
+  {
+    "id": "city-17o9snx",
+    "name": "西宁",
+    "city": "西宁",
+    "region": "西北",
+    "price": 2950,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "塔尔寺",
+      "东关清真大寺",
+      "青藏高原自然博物馆"
+    ]
+  },
+  {
+    "id": "city-5b5c63",
+    "name": "西双版纳",
+    "city": "西双版纳",
+    "region": "西南",
+    "price": 3080,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "中科院植物园",
+      "野象谷",
+      "星光夜市",
+      "曼听公园"
+    ]
+  },
+  {
+    "id": "city-ajvgo1",
+    "name": "香港",
+    "city": "香港",
+    "region": "港澳台",
+    "price": 3290,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "冬季",
+    "popular": false,
+    "highlights": [
+      "维多利亚峰·太平山",
+      "尖沙咀星光大道",
+      "香港迪士尼",
+      "庙街夜市",
+      "大屿山天坛大佛"
+    ]
+  },
+  {
+    "id": "city-qye8nj",
+    "name": "香格里拉",
+    "city": "香格里拉",
+    "region": "西南",
+    "price": 3260,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春秋",
+    "popular": false,
+    "highlights": [
+      "普达措国家公园",
+      "松赞林寺",
+      "独克宗古城"
+    ]
+  },
+  {
+    "id": "city-19lh35m",
+    "name": "烟台",
+    "city": "烟台",
+    "region": "华东",
+    "price": 3420,
+    "duration": 4,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "蓬莱阁",
+      "养马岛",
+      "张裕酒文化博物馆"
+    ]
+  },
+  {
+    "id": "city-fs7fwg",
+    "name": "延安",
+    "city": "延安",
+    "region": "西北",
+    "price": 3220,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "宝塔山",
+      "杨家岭",
+      "雨岔大峡谷"
+    ]
+  },
+  {
+    "id": "city-1fbeoqo",
+    "name": "延吉",
+    "city": "延吉",
+    "region": "东北",
+    "price": 2150,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "中国朝鲜族民俗园",
+      "帽儿山",
+      "延吉水上市场"
+    ]
+  },
+  {
+    "id": "city-19xywcv",
+    "name": "扬州",
+    "city": "扬州",
+    "region": "华东",
+    "price": 3330,
+    "duration": 5,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "瘦西湖",
+      "个园",
+      "东关街",
+      "大明寺"
+    ]
+  },
+  {
+    "id": "city-13uaw9g",
+    "name": "伊犁",
+    "city": "伊犁",
+    "region": "西北",
+    "price": 3040,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "那拉提草原",
+      "赛里木湖",
+      "薰衣草园"
+    ]
+  },
+  {
+    "id": "city-tgmiph",
+    "name": "宜昌",
+    "city": "宜昌",
+    "region": "华中",
+    "price": 2930,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "三峡大坝",
+      "三峡人家",
+      "清江画廊"
+    ]
+  },
+  {
+    "id": "city-hovy7w",
+    "name": "银川",
+    "city": "银川",
+    "region": "西北",
+    "price": 2500,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "镇北堡西部影城",
+      "西夏陵",
+      "贺兰山岩画"
+    ]
+  },
+  {
+    "id": "city-1beafl1",
+    "name": "张家界",
+    "city": "张家界",
+    "region": "华中",
+    "price": 2570,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "武陵源核心景区",
+      "天门山",
+      "大峡谷玻璃桥",
+      "黄龙洞"
+    ]
+  },
+  {
+    "id": "city-37rswo",
+    "name": "张家口",
+    "city": "张家口",
+    "region": "华北",
+    "price": 2940,
+    "duration": 4,
+    "rating": 4.5,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "草原天路",
+      "崇礼滑雪场",
+      "大境门"
+    ]
+  },
+  {
+    "id": "city-15yxvwr",
+    "name": "张掖",
+    "city": "张掖",
+    "region": "西北",
+    "price": 2770,
+    "duration": 4,
+    "rating": 4.8,
+    "tags": [
+      "人文古迹",
+      "自然"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "七彩丹霞",
+      "平山湖大峡谷",
+      "马蹄寺"
+    ]
+  },
+  {
+    "id": "city-qooiaw",
+    "name": "长白山",
+    "city": "长白山",
+    "region": "东北",
+    "price": 2510,
+    "duration": 5,
+    "rating": 4.5,
+    "tags": [
+      "自然"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "长白山北坡(门票+环保车)",
+      "长白山西坡",
+      "天池",
+      "魔界景区"
+    ]
+  },
+  {
+    "id": "city-7kn9ip",
+    "name": "长春",
+    "city": "长春",
+    "region": "东北",
+    "price": 2780,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "亲子",
+      "休闲"
+    ],
+    "bestSeason": "秋季",
+    "popular": false,
+    "highlights": [
+      "伪满皇宫博物院",
+      "净月潭",
+      "长影世纪城"
+    ]
+  },
+  {
+    "id": "city-11is0s5",
+    "name": "长沙",
+    "city": "长沙",
+    "region": "华中",
+    "price": 2390,
+    "duration": 5,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "美食"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "橘子洲",
+      "岳麓山·岳麓书院",
+      "湖南博物院",
+      "太平老街",
+      "文和友"
+    ]
+  },
+  {
+    "id": "city-12mn0g6",
+    "name": "郑州",
+    "city": "郑州",
+    "region": "华中",
+    "price": 2300,
+    "duration": 5,
+    "rating": 4.7,
+    "tags": [
+      "人文古迹"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "河南博物院",
+      "少林寺",
+      "嵩阳书院",
+      "只有河南·戏剧幻城"
+    ]
+  },
+  {
+    "id": "city-1rijlih",
+    "name": "中卫",
+    "city": "中卫",
+    "region": "西北",
+    "price": 2590,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "城市探索"
+    ],
+    "bestSeason": "夏秋",
+    "popular": false,
+    "highlights": [
+      "沙坡头",
+      "腾格里沙漠露营",
+      "66号公路"
+    ]
+  },
+  {
+    "id": "city-bcw5u5",
+    "name": "舟山",
+    "city": "舟山",
+    "region": "华东",
+    "price": 3150,
+    "duration": 4,
+    "rating": 4.6,
+    "tags": [
+      "人文古迹",
+      "自然",
+      "海岛",
+      "度假"
+    ],
+    "bestSeason": "春季",
+    "popular": false,
+    "highlights": [
+      "普陀山",
+      "朱家尖·南沙",
+      "东极岛"
+    ]
+  }
+]

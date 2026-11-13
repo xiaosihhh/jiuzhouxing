@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>城市封面生成器</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    html,body{width:100%;height:100%;overflow:hidden;background:#0f172a}
+    body{font-family:"Microsoft YaHei UI","Microsoft YaHei",sans-serif}
+    .cover{position:relative;width:1200px;height:750px;overflow:hidden;color:#fff;background:var(--bg)}
+    .wash{position:absolute;inset:-15%;background:
+      radial-gradient(circle at 78% 22%,var(--glow) 0 9%,transparent 35%),
+      radial-gradient(circle at 18% 88%,var(--glow2) 0 8%,transparent 42%),
+      linear-gradient(135deg,var(--c1),var(--c2));transform:rotate(-7deg) scale(1.08)}
+    .grain{position:absolute;inset:0;opacity:.15;background-image:radial-gradient(rgba(255,255,255,.8) .8px,transparent .8px);background-size:7px 7px;mix-blend-mode:overlay}
+    .sun{position:absolute;right:95px;top:80px;width:160px;height:160px;border-radius:50%;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.22);box-shadow:0 0 80px rgba(255,255,255,.18)}
+    .orbit{position:absolute;right:42px;top:28px;width:270px;height:270px;border:1px solid rgba(255,255,255,.20);border-radius:50%}
+    .orbit::after{content:"";position:absolute;inset:34px;border:1px solid rgba(255,255,255,.14);border-radius:50%}
+    .hill{position:absolute;bottom:0;left:0;width:100%;height:43%;background:var(--hill);clip-path:polygon(0 68%,12% 50%,22% 61%,34% 34%,45% 57%,58% 28%,70% 49%,82% 24%,100% 52%,100% 100%,0 100%)}
+    .hill.back{height:58%;opacity:.32;background:#fff;clip-path:polygon(0 72%,14% 40%,27% 60%,39% 27%,53% 54%,67% 20%,85% 49%,100% 32%,100% 100%,0 100%)}
+    .cityline{position:absolute;right:0;bottom:0;width:58%;height:32%;opacity:.38;background:linear-gradient(to top,var(--hill) 0 100%);clip-path:polygon(0 100%,0 64%,5% 64%,5% 45%,10% 45%,10% 70%,16% 70%,16% 36%,22% 36%,22% 59%,28% 59%,28% 23%,33% 23%,33% 67%,40% 67%,40% 42%,46% 42%,46% 74%,53% 74%,53% 31%,58% 31%,58% 64%,64% 64%,64% 48%,70% 48%,70% 72%,78% 72%,78% 37%,84% 37%,84% 63%,90% 63%,90% 50%,100% 50%,100% 100%)}
+    .content{position:absolute;inset:0;padding:70px 74px;display:flex;flex-direction:column;justify-content:space-between}
+    .top{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:13px;font-weight:800;font-size:22px;letter-spacing:.02em}
+    .mark{font-size:30px;color:#fff}
+    .region{padding:9px 16px;border:1px solid rgba(255,255,255,.28);border-radius:999px;background:rgba(255,255,255,.10);backdrop-filter:blur(10px);font-size:15px;font-weight:700}
+    .main{max-width:760px;transform:translateY(-8px)}
+    .icon{font-size:52px;margin-bottom:10px;filter:drop-shadow(0 6px 12px rgba(0,0,0,.22))}
+    .eyebrow{font-size:14px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;opacity:.8;margin-bottom:12px}
+    h1{font-size:92px;line-height:1.02;font-weight:900;letter-spacing:-.055em;text-shadow:0 8px 28px rgba(0,0,0,.18)}
+    .desc{margin-top:18px;max-width:680px;font-size:22px;line-height:1.65;color:rgba(255,255,255,.88);text-shadow:0 2px 8px rgba(0,0,0,.16)}
+    .footer{display:flex;align-items:flex-end;justify-content:space-between}
+    .tagline{font-size:15px;font-weight:600;letter-spacing:.13em;opacity:.8}
+    .index{font-family:Georgia,serif;font-size:54px;font-style:italic;opacity:.32}
+    .cover[data-variant="1"] .content{padding-left:96px}
+    .cover[data-variant="1"] .main{max-width:850px}
+    .cover[data-variant="1"] .sun{left:82px;right:auto;top:auto;bottom:72px;width:120px;height:120px}
+    .cover[data-variant="2"] .content{align-items:center;text-align:center}
+    .cover[data-variant="2"] .top{width:100%}
+    .cover[data-variant="2"] .main{display:flex;flex-direction:column;align-items:center}
+    .cover[data-variant="2"] .desc{max-width:760px}
+    .cover[data-variant="2"] .footer{width:100%}
+    .cover[data-variant="3"] .content{padding-left:min(500px,42%)}
+    .cover[data-variant="3"] h1{font-size:82px}
+  </style>
+</head>
+<body>
+  <div id="cover" class="cover">
+    <div class="wash"></div>
+    <div class="sun"></div>
+    <div class="orbit"></div>
+    <div class="hill back"></div>
+    <div class="hill"></div>
+    <div class="cityline"></div>
+    <div class="grain"></div>
+    <div class="content">
+      <div class="top">
+        <div class="brand"><span class="mark">◈</span><span>九州行</span></div>
+        <div class="region" id="region">中国旅行</div>
+      </div>
+      <div class="main">
+        <div class="icon" id="icon">✈️</div>
+        <div class="eyebrow">JOURNEY ACROSS CHINA</div>
+        <h1 id="name">中国</h1>
+        <div class="desc" id="desc">读懂中国山河，规划下一段旅程</div>
+      </div>
+      <div class="footer">
+        <div class="tagline">城市灵感 · 景点 · 住宿 · 路线</div>
+        <div class="index" id="index">01</div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const params=new URLSearchParams(location.search);
+    const name=params.get("name")||"中国";
+    const region=params.get("region")||"中国旅行";
+    const desc=params.get("desc")||"读懂中国山河，规划下一段旅程";
+    const index=Number(params.get("index")||1);
+    let hash=2166136261;
+    for(const ch of name){hash^=ch.charCodeAt(0);hash=Math.imul(hash,16777619)}
+    hash>>>=0;
+    const hue=hash%360;
+    const palette=[[18,68,38],[145,58,34],[205,70,30],[260,55,34],[35,62,32]];
+    const p=palette[hash%palette.length];
+    const root=document.documentElement.style;
+    root.setProperty("--c1",`hsl(${hue} ${p[1]}% ${p[2]}%)`);
+    root.setProperty("--c2",`hsl(${(hue+42)%360} 54% 18%)`);
+    root.setProperty("--glow",`hsl(${(hue+18)%360} 84% 65% / .38)`);
+    root.setProperty("--glow2",`hsl(${(hue+170)%360} 72% 55% / .22)`);
+    root.setProperty("--hill",`hsl(${(hue+22)%360} 44% 11%)`);
+    const icons=["🏯","⛰️","🌊","🏙️","🐼","🏔️","🏖️","🕌","🌿","🚄"];
+    document.getElementById("cover").dataset.variant=String(index%4);
+    document.getElementById("name").textContent=name;
+    document.getElementById("region").textContent=region;
+    document.getElementById("desc").textContent=desc;
+    document.getElementById("icon").textContent=icons[hash%icons.length];
+    document.getElementById("index").textContent=String(index).padStart(2,"0");
+  </script>
+</body>
+</html>

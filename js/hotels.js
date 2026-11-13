@@ -1,0 +1,22 @@
+window.HOTEL_DATA = [
+  {id:"bj-palace",city:"北京",name:"王府井御景酒店",area:"东城区 · 王府井",price:688,rating:4.8,tags:["近地铁","亲子","含早"],distance:"距故宫约 1.2 km",summary:"步行可达故宫与王府井，客房采用新中式设计，适合首次到访北京的家庭游客。",amenities:["免费早餐","健身房","行李寄存","家庭房"]},
+  {id:"bj-canal",city:"北京",name:"后海云栖庭院",area:"西城区 · 什刹海",price:528,rating:4.7,tags:["胡同","安静","庭院"],distance:"距什刹海约 500 m",summary:"藏在胡同里的精品庭院酒店，步行可到钟鼓楼，夜晚安静且交通便利。",amenities:["庭院","咖啡吧","洗衣房","自行车"]},
+  {id:"xa-wall",city:"西安",name:"城墙悦居酒店",area:"碑林区 · 永宁门",price:438,rating:4.7,tags:["城墙景观","近地铁","美食"],distance:"距西安城墙约 300 m",summary:"推窗可见明城墙夜景，邻近永宁门地铁站和回民街，适合城市漫游。",amenities:["城墙景观","早餐","行李寄存","洗衣房"]},
+  {id:"xa-tang",city:"西安",name:"大唐不夜城唐风客栈",area:"雁塔区 · 大雁塔",price:398,rating:4.6,tags:["唐风","亲子","夜景"],distance:"距大雁塔约 800 m",summary:"唐风主题客房与亲子活动兼备，步行即可游览大雁塔和大唐不夜城。",amenities:["亲子活动","汉服体验","早餐","接送咨询"]},
+  {id:"cd-panda",city:"成都",name:"宽窄熊猫主题酒店",area:"青羊区 · 宽窄巷子",price:468,rating:4.8,tags:["亲子","熊猫主题","近地铁"],distance:"距宽窄巷子约 600 m",summary:"熊猫主题房与儿童游乐区深受家庭欢迎，周边茶馆和川菜馆密集。",amenities:["儿童乐园","早餐","洗衣机","行李寄存"]},
+  {id:"cd-tea",city:"成都",name:"锦江茶隐精品酒店",area:"锦江区 · 春熙路",price:558,rating:4.7,tags:["市中心","茶文化","购物"],distance:"距春熙路约 400 m",summary:"闹中取静的茶文化酒店，适合把美食、购物与城市夜景连成一条步行路线。",amenities:["茶室","健身房","早餐","延迟退房"]},
+  {id:"cq-river",city:"重庆",name:"解放碑江景云宿",area:"渝中区 · 解放碑",price:518,rating:4.8,tags:["江景","夜景","近地铁"],distance:"距洪崖洞约 900 m",summary:"高层江景房可看两江交汇与山城夜景，出门即可体验轻轨和坡道街巷。",amenities:["江景房","观景台","早餐","行李寄存"]},
+  {id:"cq-old",city:"重庆",name:"磁器口山居小院",area:"沙坪坝区 · 磁器口",price:368,rating:4.5,tags:["古镇","庭院","安静"],distance:"距磁器口古镇约 450 m",summary:"青石小巷中的安静院落，适合慢游古镇，也方便前往沙坪坝商圈。",amenities:["庭院","茶室","早餐","行李寄存"]},
+  {id:"sh-bund",city:"上海",name:"外滩云端酒店",area:"黄浦区 · 外滩",price:928,rating:4.8,tags:["江景","市中心","地铁"],distance:"距外滩约 350 m",summary:"可步行游览外滩、南京东路与豫园，高层客房拥有开阔浦江景观。",amenities:["江景房","健身房","早餐","礼宾服务"]},
+  {id:"sh-sinan",city:"上海",name:"思南公馆景致酒店",area:"黄浦区 · 思南公馆",price:798,rating:4.7,tags:["历史建筑","安静","梧桐区"],distance:"距田子坊约 1.4 km",summary:"梧桐街区中的历史建筑酒店，适合喜欢城市建筑、咖啡和慢节奏漫步的旅客。",amenities:["花园","咖啡吧","早餐","阅读区"]},
+  {id:"hz-lake",city:"杭州",name:"西湖枕水酒店",area:"西湖区 · 北山街",price:638,rating:4.8,tags:["湖景","近西湖","安静"],distance:"距断桥约 600 m",summary:"临近西湖北线，清晨可步行环湖，客房以江南水乡色调打造。",amenities:["湖景房","早餐","自行车","茶室"]},
+  {id:"hz-longjing",city:"杭州",name:"龙井山居客舍",area:"西湖区 · 龙井村",price:588,rating:4.7,tags:["茶园","亲子","庭院"],distance:"距灵隐寺约 3 km",summary:"被茶园环绕的山居客舍，适合亲子采茶体验与周末短途度假。",amenities:["茶园体验","亲子房","早餐","停车"]},
+  {id:"sy-bay",city:"三亚",name:"亚龙湾椰林度假酒店",area:"吉阳区 · 亚龙湾",price:1188,rating:4.8,tags:["海景","亲子","泳池"],distance:"距亚龙湾海滩约 200 m",summary:"拥有亲子泳池和专属沙滩通道，适合家庭游客连续入住多晚。",amenities:["私人沙滩","儿童俱乐部","泳池","早餐"]},
+  {id:"sy-haitang",city:"三亚",name:"海棠湾日出海居",area:"海棠区 · 海棠湾",price:968,rating:4.7,tags:["海景","安静","度假"],distance:"距海棠湾海滩约 350 m",summary:"面向日出的海景客房与花园泳池，适合情侣度假和安静放空。",amenities:["海景房","泳池","接机咨询","早餐"]},
+  {id:"ls-snow",city:"拉萨",name:"布宫雪景酒店",area:"城关区 · 布达拉宫",price:468,rating:4.7,tags:["布宫景观","供氧","近景点"],distance:"距布达拉宫约 700 m",summary:"部分客房可远眺布达拉宫，提供高原旅行咨询和房间供氧设备。",amenities:["弥散供氧","景观房","早餐","接送咨询"]},
+  {id:"ls-old",city:"拉萨",name:"八廓古城暖阳客栈",area:"城关区 · 八廓街",price:358,rating:4.6,tags:["古城","安静","庭院"],distance:"距大昭寺约 550 m",summary:"藏式庭院与暖阳露台兼有，步行即可感受八廓街的生活气息。",amenities:["庭院","茶室","供氧","行李寄存"]},
+  {id:"urumqi-bazaar",city:"乌鲁木齐",name:"大巴扎丝路酒店",area:"天山区 · 国际大巴扎",price:398,rating:4.6,tags:["市中心","美食","亲子"],distance:"距国际大巴扎约 300 m",summary:"交通便利，步行可达大巴扎，适合作为新疆长线旅行的城市落脚点。",amenities:["早餐","家庭房","洗衣房","停车"]},
+  {id:"urumqi-snow",city:"乌鲁木齐",name:"天山雪莲精品酒店",area:"沙依巴克区 · 红山",price:358,rating:4.5,tags:["山景","安静","近地铁"],distance:"距红山公园约 900 m",summary:"房间简洁舒适，适合前往天山及周边景区前休整，地铁出行方便。",amenities:["山景房","早餐","健身房","行李寄存"]},
+  {id:"kanas-wood",city:"喀纳斯",name:"图瓦木屋森林客栈",area:"喀纳斯湖景区",price:528,rating:4.7,tags:["木屋","森林","摄影"],distance:"距喀纳斯湖换乘中心约 1 km",summary:"原木风格与山林景观相融，适合摄影游客体验图瓦村落生活。",amenities:["木屋","观景露台","早餐","接送咨询"]},
+  {id:"kanas-lake",city:"喀纳斯",name:"观鱼台星空客舍",area:"喀纳斯湖景区",price:458,rating:4.5,tags:["星空","山景","摄影"],distance:"靠近换乘中心",summary:"夜晚可观星，清晨方便前往观鱼台，适合行程紧凑的摄影游客。",amenities:["观星露台","早餐","行李寄存","停车"]}
+];
