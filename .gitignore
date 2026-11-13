@@ -28,6 +28,7 @@ $null
 .codeartsdoer/.codebase/
 .codeartsdoer/mem-exp-config.json
 .codeartsdoer/mcp/mcp_settings.json
+deliverables/.deck-assets/
 
 # OS and editor files
 .DS_Store

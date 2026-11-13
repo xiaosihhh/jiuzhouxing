@@ -121,7 +121,7 @@ async function handle(req, res) {
         cache: await cache.health(),
         objectStorage: await objectStore.health()
       },
-      version: "1.1.0"
+      version: "1.2.0"
     });
     return;
   }

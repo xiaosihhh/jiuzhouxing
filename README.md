@@ -124,6 +124,15 @@ node tools/check-project.js
 node tools/validate-data.js
 ```
 
-## 开源提交提醒
+## 比赛材料
 
-项目的业务代码已整理，但提交 Gitee/GitHub 前仍需确认仓库公开范围并选择开源许可证。不要把 `.env`、云密钥、RDS 密码或个人账号信息提交到公开仓库。
+- [参赛行动清单](docs/COMPETITION_ACTION_PLAN.md)
+- [系统架构](docs/ARCHITECTURE.md)
+- [演示脚本](docs/DEMO_SCRIPT.md)
+- [页面排版检查](docs/LAYOUT_AUDIT.md)
+- [可编辑答辩 PPT](deliverables/jiuzhouxing-competition-deck-v1.2.0.pptx)
+- [答辩 PDF](deliverables/jiuzhouxing-competition-deck-v1.2.0.pdf)
+
+## 开源提交
+
+项目采用 MIT License。公开仓库不包含 `.env`、云服务密钥、用户账号、对话记录、行程数据或日志。赛题要求和最后期限以华为赛事后台为准。

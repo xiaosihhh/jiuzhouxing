@@ -1,6 +1,6 @@
 {
   "name": "jiuzhouxing",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "description": "九州行中国旅行规划与华为云智能体接入示例",
   "main": "backend/server.js",
