@@ -8,6 +8,7 @@ node_modules/
 data/users.json
 data/conversations.jsonl
 data/trips.json
+data/huawei-network.json
 *.log
 
 # Local versions, caches and temporary files
@@ -23,6 +24,7 @@ __pycache__/
 *.pyc
 $null
 .merkle-snapshot.json
+.arts/
 
 # CodeArts local indexes and machine-specific state
 .codeartsdoer/.codebase/
