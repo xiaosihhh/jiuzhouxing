@@ -81,7 +81,7 @@
 
   function mediaItem(item){
     const url=String(item&&item.url||"");
-    if(!url.startsWith("/api/community/media/"))return "";
+    if(!url.startsWith("/api/community/media/")&&!window.__JZX_STATIC_API__)return "";
     if(item.type==="video"||/^video\//.test(item.type||""))return `<video src="${esc(url)}" poster="${esc(item.poster||"")}" controls playsinline preload="metadata"></video>`;
     return `<img src="${esc(url)}" alt="旅行分享图片" loading="lazy"/>`;
   }

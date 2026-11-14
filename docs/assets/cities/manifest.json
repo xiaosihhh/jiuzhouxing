@@ -1,0 +1,910 @@
+[
+  {
+    "id": "beijing",
+    "name": "北京",
+    "region": "华北",
+    "desc": "千年古都，故宫长城与胡同烟火",
+    "index": 1,
+    "file": "北京.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/photos/forbidden-city-beijing-tradition-5230231/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "shanghai",
+    "name": "上海",
+    "region": "华东",
+    "desc": "外滩万国建筑与魔都天际线",
+    "index": 2,
+    "file": "上海.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/images/search/shanghai skyline/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "xian",
+    "name": "西安",
+    "region": "西北",
+    "desc": "十三朝古都，城墙与兵马俑",
+    "index": 3,
+    "file": "西安.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/images/search/the terracotta army/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "chengdu",
+    "name": "成都",
+    "region": "西南",
+    "desc": "天府之国，熊猫与慢生活",
+    "index": 4,
+    "file": "成都.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/photos/giant-panda-chengdu-china-asia-765691/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "chongqing",
+    "name": "重庆",
+    "region": "西南",
+    "desc": "8D 魔幻山城，火锅与两江夜景",
+    "index": 5,
+    "file": "重庆.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/fr/photos/chongqing-hongya-hongya-cave-pont-5121247/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "hangzhou",
+    "name": "杭州",
+    "region": "华东",
+    "desc": "西湖烟雨与江南风雅",
+    "index": 6,
+    "file": "杭州.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/photos/west-lake-hangzhou-china-2181891/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "sanya",
+    "name": "三亚",
+    "region": "华南",
+    "desc": "东方夏威夷，椰风海韵",
+    "index": 7,
+    "file": "三亚.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/photos/sanya-yalong-bay-sea-view-room-2437983/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "lasa",
+    "name": "拉萨",
+    "region": "西南",
+    "desc": "日光之城，布达拉宫圣境",
+    "index": 8,
+    "file": "拉萨.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/photos/potala-palace-castle-tibet-religion-6834894/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "wulumuqi",
+    "name": "乌鲁木齐",
+    "region": "西北",
+    "desc": "亚心之都，丝路风情",
+    "index": 9,
+    "file": "乌鲁木齐.webp",
+    "realPhoto": true,
+    "sourcePage": "https://pixabay.com/fr/photos/urumqi-xinjiang-chine-immeubles-5973154/",
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1ft8k1m",
+    "name": "安顺",
+    "region": "西南",
+    "desc": "黄果树瀑布之乡",
+    "index": 10,
+    "file": "安顺.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-144k9b2",
+    "name": "澳门",
+    "region": "港澳台",
+    "desc": "中西交融，历史城区",
+    "index": 11,
+    "file": "澳门.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1ik7ak3",
+    "name": "北海",
+    "region": "华南",
+    "desc": "银滩与涠洲岛",
+    "index": 12,
+    "file": "北海.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1j1yj3x",
+    "name": "潮州",
+    "region": "华南",
+    "desc": "工夫茶之乡，古城牌坊街",
+    "index": 13,
+    "file": "潮州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-3rqvej",
+    "name": "承德",
+    "region": "华北",
+    "desc": "皇家避暑胜地，外八庙",
+    "index": 14,
+    "file": "承德.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1i4br1v",
+    "name": "池州",
+    "region": "华东",
+    "desc": "莲花佛国九华山",
+    "index": 15,
+    "file": "池州.webp",
+    "realPhoto": false
+  },
+  {
+    "id": "city-1fknscg",
+    "name": "大理",
+    "region": "西南",
+    "desc": "风花雪月，苍山洱海",
+    "index": 16,
+    "file": "大理.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-4uw348",
+    "name": "大连",
+    "region": "东北",
+    "desc": "浪漫之都，广场与滨海路",
+    "index": 17,
+    "file": "大连.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1ieikn2",
+    "name": "大同",
+    "region": "华北",
+    "desc": "云冈石窟与北魏风华",
+    "index": 18,
+    "file": "大同.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1eketmg",
+    "name": "丹东",
+    "region": "东北",
+    "desc": "鸭绿江畔，边境风光",
+    "index": 19,
+    "file": "丹东.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-xrgn7g",
+    "name": "稻城",
+    "region": "西南",
+    "desc": "蓝色星球上最后一片净土",
+    "index": 20,
+    "file": "稻城.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-9h8pxr",
+    "name": "敦煌",
+    "region": "西北",
+    "desc": "丝路明珠，莫高窟壁画",
+    "index": 21,
+    "file": "敦煌.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1yg3ddn",
+    "name": "恩施",
+    "region": "华中",
+    "desc": "喀斯特秘境，恩施大峡谷",
+    "index": 22,
+    "file": "恩施.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-gls3p5",
+    "name": "凤凰",
+    "region": "华中",
+    "desc": "湘西古城，沱江吊脚楼",
+    "index": 23,
+    "file": "凤凰.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-18e9uxs",
+    "name": "福州",
+    "region": "华东",
+    "desc": "有福之州，三坊七巷",
+    "index": 24,
+    "file": "福州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-t2xmu1",
+    "name": "高雄",
+    "region": "港澳台",
+    "desc": "港都，驳二与旗津",
+    "index": 25,
+    "file": "高雄.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-4d76eo",
+    "name": "广州",
+    "region": "华南",
+    "desc": "千年商都，早茶与珠江夜色",
+    "index": 26,
+    "file": "广州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-bblx7d",
+    "name": "贵阳",
+    "region": "西南",
+    "desc": "林城，避暑之都",
+    "index": 27,
+    "file": "贵阳.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-j0kvh2",
+    "name": "桂林",
+    "region": "华南",
+    "desc": "山水甲天下，漓江画卷",
+    "index": 28,
+    "file": "桂林.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-fgqf4z",
+    "name": "哈尔滨",
+    "region": "东北",
+    "desc": "冰城，中央大街与冰雪大世界",
+    "index": 29,
+    "file": "哈尔滨.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1bn05sf",
+    "name": "海口",
+    "region": "华南",
+    "desc": "椰城，骑楼老街",
+    "index": 30,
+    "file": "海口.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-54klrr",
+    "name": "呼和浩特",
+    "region": "华北",
+    "desc": "青城，草原门户",
+    "index": 31,
+    "file": "呼和浩特.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1wibk1a",
+    "name": "呼伦贝尔",
+    "region": "华北",
+    "desc": "世界四大草原之一",
+    "index": 32,
+    "file": "呼伦贝尔.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1jtqo5i",
+    "name": "黄山",
+    "region": "华东",
+    "desc": "五岳归来不看山",
+    "index": 33,
+    "file": "黄山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1wtxpte",
+    "name": "济南",
+    "region": "华东",
+    "desc": "泉城，趵突泉与大明湖",
+    "index": 34,
+    "file": "济南.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1fcbxm8",
+    "name": "嘉兴",
+    "region": "华东",
+    "desc": "水乡乌镇与西塘",
+    "index": 35,
+    "file": "嘉兴.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1yz57fx",
+    "name": "九寨沟",
+    "region": "西南",
+    "desc": "童话世界，翠海叠瀑",
+    "index": 36,
+    "file": "九寨沟.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "kanasi",
+    "name": "喀纳斯",
+    "region": "西北",
+    "desc": "神的后花园，湖怪传说",
+    "index": 37,
+    "file": "喀纳斯.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-g7m0lp",
+    "name": "喀什",
+    "region": "西北",
+    "desc": "不到喀什不算到新疆",
+    "index": 38,
+    "file": "喀什.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-u2jltm",
+    "name": "开封",
+    "region": "华中",
+    "desc": "大宋汴京，清明上河图",
+    "index": 39,
+    "file": "开封.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1bs4jit",
+    "name": "昆明",
+    "region": "西南",
+    "desc": "春城，滇池与石林",
+    "index": 40,
+    "file": "昆明.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-sqgdur",
+    "name": "兰州",
+    "region": "西北",
+    "desc": "黄河穿城，牛肉面之乡",
+    "index": 41,
+    "file": "兰州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1rvbc2i",
+    "name": "乐山",
+    "region": "西南",
+    "desc": "大佛坐镇，三江汇流",
+    "index": 42,
+    "file": "乐山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1x26t91",
+    "name": "丽江",
+    "region": "西南",
+    "desc": "古城雪山，纳西风情",
+    "index": 43,
+    "file": "丽江.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-p4y47l",
+    "name": "林芝",
+    "region": "西南",
+    "desc": "西藏江南，桃花秘境",
+    "index": 44,
+    "file": "林芝.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-s3i9kb",
+    "name": "洛阳",
+    "region": "华中",
+    "desc": "牡丹花城，龙门石窟",
+    "index": 45,
+    "file": "洛阳.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1uwrh2c",
+    "name": "漠河",
+    "region": "东北",
+    "desc": "中国最北，极光与白桦",
+    "index": 46,
+    "file": "漠河.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-sroagg",
+    "name": "牡丹江",
+    "region": "东北",
+    "desc": "雪乡童话，镜泊飞瀑",
+    "index": 47,
+    "file": "牡丹江.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-17ha4ni",
+    "name": "南京",
+    "region": "华东",
+    "desc": "六朝金粉，秦淮灯影",
+    "index": 48,
+    "file": "南京.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-xsu1v9",
+    "name": "南宁",
+    "region": "华南",
+    "desc": "绿城，壮乡首府",
+    "index": 49,
+    "file": "南宁.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-s6nreh",
+    "name": "南投",
+    "region": "港澳台",
+    "desc": "日月潭与清境农场",
+    "index": 50,
+    "file": "南投.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1721let",
+    "name": "平遥",
+    "region": "华北",
+    "desc": "保存最完整的明清古城",
+    "index": 51,
+    "file": "平遥.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-7b6qyb",
+    "name": "秦皇岛",
+    "region": "华北",
+    "desc": "渤海明珠，北戴河与山海关",
+    "index": 52,
+    "file": "秦皇岛.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-kl2xyi",
+    "name": "青岛",
+    "region": "华东",
+    "desc": "红瓦绿树，碧海蓝天",
+    "index": 53,
+    "file": "青岛.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-z6gy34",
+    "name": "青海湖",
+    "region": "西北",
+    "desc": "中国最大咸水湖",
+    "index": 54,
+    "file": "青海湖.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1oef63v",
+    "name": "曲阜",
+    "region": "华东",
+    "desc": "孔子故里，三孔圣地",
+    "index": 55,
+    "file": "曲阜.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-nn90df",
+    "name": "厦门",
+    "region": "华东",
+    "desc": "海上花园，鼓浪屿琴声",
+    "index": 56,
+    "file": "厦门.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-trhsn1",
+    "name": "深圳",
+    "region": "华南",
+    "desc": "科创之城，摩天楼群与滨海栈道",
+    "index": 57,
+    "file": "深圳.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1p772oc",
+    "name": "沈阳",
+    "region": "东北",
+    "desc": "盛京往事，故宫与帅府",
+    "index": 58,
+    "file": "沈阳.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-5ovpo4",
+    "name": "十堰",
+    "region": "华中",
+    "desc": "道教圣地武当山",
+    "index": 59,
+    "file": "十堰.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1eqd1cw",
+    "name": "苏州",
+    "region": "华东",
+    "desc": "园林之城，小桥流水人家",
+    "index": 60,
+    "file": "苏州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-e3fox4",
+    "name": "台北",
+    "region": "港澳台",
+    "desc": "美食与文艺，夜市烟火",
+    "index": 61,
+    "file": "台北.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-5k31ty",
+    "name": "太原",
+    "region": "华北",
+    "desc": "龙城晋韵，晋祠与面食",
+    "index": 62,
+    "file": "太原.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1woywia",
+    "name": "泰安",
+    "region": "华东",
+    "desc": "五岳之首泰山",
+    "index": 63,
+    "file": "泰安.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-on704z",
+    "name": "天津",
+    "region": "华北",
+    "desc": "津门故里，五大道与小洋楼",
+    "index": 64,
+    "file": "天津.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-oc057y",
+    "name": "铜仁",
+    "region": "西南",
+    "desc": "梵天净土，弥勒道场",
+    "index": 65,
+    "file": "铜仁.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-9o7a74",
+    "name": "吐鲁番",
+    "region": "西北",
+    "desc": "火洲，葡萄沟与坎儿井",
+    "index": 66,
+    "file": "吐鲁番.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-4diat6",
+    "name": "无锡",
+    "region": "华东",
+    "desc": "太湖明珠，灵山胜境",
+    "index": 67,
+    "file": "无锡.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-m7ixuw",
+    "name": "五台山",
+    "region": "华北",
+    "desc": "文殊道场，清凉佛国",
+    "index": 68,
+    "file": "五台山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-6tewkw",
+    "name": "武汉",
+    "region": "华中",
+    "desc": "九省通衢，长江大桥与樱花",
+    "index": 69,
+    "file": "武汉.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-14ve7sx",
+    "name": "武夷山",
+    "region": "华东",
+    "desc": "丹霞碧水，岩茶之乡",
+    "index": 70,
+    "file": "武夷山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-17o9snx",
+    "name": "西宁",
+    "region": "西北",
+    "desc": "夏都，青藏门户",
+    "index": 71,
+    "file": "西宁.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-5b5c63",
+    "name": "西双版纳",
+    "region": "西南",
+    "desc": "雨林傣乡，泼水狂欢",
+    "index": 72,
+    "file": "西双版纳.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-ajvgo1",
+    "name": "香港",
+    "region": "港澳台",
+    "desc": "东方之珠，维港夜景",
+    "index": 73,
+    "file": "香港.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-qye8nj",
+    "name": "香格里拉",
+    "region": "西南",
+    "desc": "消失的地平线，藏地风华",
+    "index": 74,
+    "file": "香格里拉.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-19lh35m",
+    "name": "烟台",
+    "region": "华东",
+    "desc": "仙境海岸，蓬莱阁",
+    "index": 75,
+    "file": "烟台.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-fs7fwg",
+    "name": "延安",
+    "region": "西北",
+    "desc": "革命圣地，黄土风情",
+    "index": 76,
+    "file": "延安.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1fbeoqo",
+    "name": "延吉",
+    "region": "东北",
+    "desc": "朝鲜族风情，网红弹幕墙",
+    "index": 77,
+    "file": "延吉.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-19xywcv",
+    "name": "扬州",
+    "region": "华东",
+    "desc": "淮左名都，瘦西湖",
+    "index": 78,
+    "file": "扬州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-13uaw9g",
+    "name": "伊犁",
+    "region": "西北",
+    "desc": "塞外江南，薰衣草之谷",
+    "index": 79,
+    "file": "伊犁.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-tgmiph",
+    "name": "宜昌",
+    "region": "华中",
+    "desc": "三峡门户，水电之都",
+    "index": 80,
+    "file": "宜昌.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-hovy7w",
+    "name": "银川",
+    "region": "西北",
+    "desc": "塞上江南，西夏故地",
+    "index": 81,
+    "file": "银川.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1beafl1",
+    "name": "张家界",
+    "region": "华中",
+    "desc": "阿凡达悬浮山",
+    "index": 82,
+    "file": "张家界.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-37rswo",
+    "name": "张家口",
+    "region": "华北",
+    "desc": "冬奥之城，草原天路",
+    "index": 83,
+    "file": "张家口.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-15yxvwr",
+    "name": "张掖",
+    "region": "西北",
+    "desc": "七彩丹霞，河西走廊",
+    "index": 84,
+    "file": "张掖.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-qooiaw",
+    "name": "长白山",
+    "region": "东北",
+    "desc": "圣山天池，林海雪原",
+    "index": 85,
+    "file": "长白山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-7kn9ip",
+    "name": "长春",
+    "region": "东北",
+    "desc": "电影之城，伪满旧影",
+    "index": 86,
+    "file": "长春.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-11is0s5",
+    "name": "长沙",
+    "region": "华中",
+    "desc": "星城，美食与娱乐之都",
+    "index": 87,
+    "file": "长沙.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-12mn0g6",
+    "name": "郑州",
+    "region": "华中",
+    "desc": "中原枢纽，商都遗址",
+    "index": 88,
+    "file": "郑州.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-1rijlih",
+    "name": "中卫",
+    "region": "西北",
+    "desc": "沙坡头，大漠黄河",
+    "index": 89,
+    "file": "中卫.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  },
+  {
+    "id": "city-bcw5u5",
+    "name": "舟山",
+    "region": "华东",
+    "desc": "海天佛国普陀山",
+    "index": 90,
+    "file": "舟山.webp",
+    "realPhoto": true,
+    "license": "License not verified; review before public release"
+  }
+]

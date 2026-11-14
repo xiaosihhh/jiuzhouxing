@@ -1421,6 +1421,24 @@ $("#resetFilters").addEventListener("click", ()=>{
   /* ---- 手机扫码访问 ---- */
   const qrModal=$("#qrModal"), qrCanvas=$("#qrCanvas"), qrUrl=$("#qrUrl");
   function shareQR(){
+    if(window.__JZX_STATIC_API__){
+      const url=new URL("index.html",document.baseURI).href;
+      qrUrl.textContent=url;
+      if(window.QRCode){
+        qrCanvas.innerHTML="";
+        new window.QRCode(qrCanvas,{
+          text:url,
+          width:200,
+          height:200,
+          colorDark:"#0052FF",
+          colorLight:"#ffffff",
+          correctLevel:window.QRCode.CorrectLevel.M
+        });
+      }
+      qrModal.hidden=false;
+      document.body.style.overflow="hidden";
+      return;
+    }
     let host = location.hostname;
     const config = window.APP_CONFIG || {};
     if(host==="localhost"||host==="127.0.0.1"||host==="0.0.0.0"||location.protocol==="file:") host = config.lanIp || "";

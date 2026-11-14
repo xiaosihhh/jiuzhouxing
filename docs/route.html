@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.is.autonavi.com; connect-src 'self'; object-src 'none'; base-uri 'self'" />
+  <title>路线导航 · 九州行</title>
+  <meta name="description" content="高德式出行路线规划 — 选城市、定交通、生成路线图、一键导航。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="js/vendor/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">九州行</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html#destinations">精选目的地</a>
+        <a href="cities.html">中国城市库</a>
+        <a href="route.html" class="active">路线导航</a>
+        <a href="hotel.html">酒店探索</a>
+        <a href="community.html">热门城市分享</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="切换深色模式" title="切换深色模式">
+          <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+        </button>
+        <a href="index.html" class="btn-accent btn-sm">返回主页 →</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero ch-hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="eyebrow">ROUTE NAVIGATION</span>
+      <h1 class="hero-title">路线导航<br/><span class="grad">生成路线图 · 一键导航</span></h1>
+      <p class="hero-sub">选起终点、添加途经城市并生成路线图；驾车可跳转高德导航，高铁可进入 12306，飞机可进入携程机票查询。</p>
+      <div class="hero-cta">
+        <a href="#planner" class="btn-accent">开始规划</a>
+        <a href="index.html" class="btn-ghost">← 返回主页</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 规划面板 -->
+  <section class="rt-planner" id="planner">
+    <div class="rt-panel">
+      <div class="rt-row">
+        <div class="rt-field">
+          <label for="rtFrom"><span class="rt-dot rt-from"></span>起点</label>
+          <select id="rtFrom" class="rt-select"></select>
+        </div>
+        <button id="rtSwap" class="rt-swap" type="button" title="交换起终点" aria-label="交换起终点">⇅</button>
+        <div class="rt-field">
+          <label for="rtTo"><span class="rt-dot rt-to"></span>终点</label>
+          <select id="rtTo" class="rt-select"></select>
+        </div>
+      </div>
+      <div class="rt-via-head">
+        <div><span>途经城市</span><small>可选，进入后点按钮可添加多个</small></div>
+        <button id="rtViaAdd" class="rt-via-add" type="button">＋ 添加途经点</button>
+      </div>
+      <div id="rtViaList" class="rt-via-list"></div>
+      <div class="rt-modes" id="rtModes">
+        <button class="rt-mode active" type="button" data-mode="auto">🧭 智能推荐</button>
+        <button class="rt-mode" type="button" data-mode="car">🚗 驾车</button>
+        <button class="rt-mode" type="button" data-mode="rail">🚄 高铁</button>
+        <button class="rt-mode" type="button" data-mode="plane">✈️ 飞机</button>
+        <button class="rt-mode" type="button" data-mode="bus">🚌 大巴</button>
+      </div>
+      <button id="rtGo" class="rt-go" type="button">🗺 生成路线图</button>
+    </div>
+  </section>
+
+  <!-- 路线结果 -->
+  <section class="rt-result" id="rtResult" hidden>
+    <div class="rt-map-wrap">
+      <div id="rtMap" class="ch-map"></div>
+    </div>
+    <div class="rt-summary" id="rtSummary"></div>
+    <div class="rt-segs" id="rtSegs"></div>
+    <div class="rt-actions" id="rtActions"></div>
+  </section>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <footer class="footer">
+    <p>九州行 · 路线导航 — 参考高德地图路线规划，交通耗时与费用为估算值</p>
+  </footer>
+
+  <script src="js/vendor/leaflet.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/static-api.js"></script>
+  <script src="js/route-app.js"></script>
+  <script src="js/companion.js"></script>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>九州行 · 华为云服务接入证据</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      background: #eef4f7;
+      color: #173042;
+      font-family: "Microsoft YaHei", "Segoe UI", sans-serif;
+    }
+    .card {
+      width: 1120px;
+      min-height: 640px;
+      padding: 54px 58px;
+      background:
+        radial-gradient(circle at 92% 8%, rgba(33, 170, 142, .16), transparent 28%),
+        linear-gradient(145deg, #ffffff 0%, #f8fcfb 100%);
+      border: 1px solid #d7e5e6;
+      border-radius: 28px;
+      box-shadow: 0 24px 70px rgba(26, 66, 80, .14);
+      position: relative;
+      overflow: hidden;
+    }
+    .card::after {
+      content: "";
+      position: absolute;
+      right: -90px;
+      bottom: -120px;
+      width: 360px;
+      height: 360px;
+      border-radius: 50%;
+      border: 54px solid rgba(23, 48, 66, .04);
+    }
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: #19856e;
+      font-size: 20px;
+      font-weight: 700;
+      letter-spacing: .08em;
+    }
+    .dot { width: 12px; height: 12px; border-radius: 50%; background: #20b486; }
+    h1 { margin: 20px 0 10px; font-size: 46px; line-height: 1.15; }
+    .summary { margin: 0; color: #617785; font-size: 20px; line-height: 1.7; }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 28px;
+      padding: 11px 18px;
+      border-radius: 999px;
+      background: #e6f8f1;
+      color: #08775d;
+      font-size: 18px;
+      font-weight: 700;
+    }
+    .status span { width: 10px; height: 10px; border-radius: 50%; background: #14aa7e; }
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin-top: 36px;
+      position: relative;
+      z-index: 1;
+    }
+    .item {
+      padding: 22px 24px;
+      border: 1px solid #dde9eb;
+      border-radius: 16px;
+      background: rgba(255,255,255,.82);
+    }
+    .label { color: #7b8f9b; font-size: 15px; margin-bottom: 8px; }
+    .value { color: #173042; font-size: 21px; font-weight: 700; word-break: break-all; }
+    .mono { font-family: "Cascadia Mono", Consolas, monospace; font-size: 18px; }
+    .footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: 34px;
+      color: #718691;
+      font-size: 15px;
+      line-height: 1.65;
+      position: relative;
+      z-index: 1;
+    }
+    .brand {
+      color: #173042;
+      font-weight: 800;
+      font-size: 24px;
+      letter-spacing: .04em;
+    }
+  </style>
+</head>
+<body>
+  <section class="card" id="rds">
+    <div class="eyebrow"><i class="dot"></i> HUAWEI CLOUD · RDS FOR MYSQL</div>
+    <h1>云数据库 RDS 接入验证</h1>
+    <p class="summary">九州行后端已通过真实 RDS 实例完成 MySQL 连接和自检，用于用户、行程及业务数据持久化。</p>
+    <div class="status"><span></span> 实例状态：ACTIVE</div>
+    <div class="grid">
+      <div class="item"><div class="label">实例名称</div><div class="value">jzx-rds-mysql</div></div>
+      <div class="item"><div class="label">数据库版本</div><div class="value">MySQL 8.0.43</div></div>
+      <div class="item"><div class="label">实例规格</div><div class="value">2 vCPU · 4 GB · 40 GB</div></div>
+      <div class="item"><div class="label">实例 ID</div><div class="value mono">dcc5139976314d4c9028f1188a618eb2in01</div></div>
+      <div class="item"><div class="label">内网地址</div><div class="value mono">192.168.1.197:3306</div></div>
+      <div class="item"><div class="label">验证时间</div><div class="value">2026-11-14</div></div>
+    </div>
+    <div class="footer">
+      <div><div class="brand">九州行 · 中国旅行规划</div>证据来自华为云 API 实际查询；资源已按用户要求释放。</div>
+      <div>项目版本 1.2.0</div>
+    </div>
+  </section>
+
+  <section class="card" id="redis">
+    <div class="eyebrow"><i class="dot"></i> HUAWEI CLOUD · DCS FOR REDIS</div>
+    <h1>分布式缓存 Redis 接入验证</h1>
+    <p class="summary">九州行后端已接入华为云 DCS Redis，用于旅行助手结果、城市数据和接口响应缓存。</p>
+    <div class="status"><span></span> 实例状态：RUNNING</div>
+    <div class="grid">
+      <div class="item"><div class="label">实例名称</div><div class="value">jzx-redis</div></div>
+      <div class="item"><div class="label">缓存版本</div><div class="value">Redis 5.0</div></div>
+      <div class="item"><div class="label">实例规格</div><div class="value">单机 · 128 MB</div></div>
+      <div class="item"><div class="label">实例 ID</div><div class="value mono">5fe2f2e4-1f61-4cb9-865f-f4c96f5c9e6e</div></div>
+      <div class="item"><div class="label">内网地址</div><div class="value mono">192.168.1.213:6379</div></div>
+      <div class="item"><div class="label">验证时间</div><div class="value">2026-11-14</div></div>
+    </div>
+    <div class="footer">
+      <div><div class="brand">九州行 · 中国旅行规划</div>证据来自华为云 API 实际查询；资源已按用户要求释放。</div>
+      <div>项目版本 1.2.0</div>
+    </div>
+  </section>
+</body>
+</html>

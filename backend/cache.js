@@ -13,7 +13,13 @@ class HybridCache {
     if (!this.url) return;
     try {
       const redis = await import("redis");
-      this.client = redis.createClient({ url: this.url });
+      this.client = redis.createClient({
+        url: this.url,
+        socket: {
+          connectTimeout: 3000,
+          reconnectStrategy: false
+        }
+      });
       this.client.on("error", () => {
         this.mode = "memory-fallback";
       });

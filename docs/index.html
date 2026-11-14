@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.is.autonavi.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>九州行 · 中国旅行规划</title>
+  <meta name="description" content="九州行 — 精选中国旅行目的地，智能搜索、地图探索、预算参考与行程规划。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="js/vendor/leaflet.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- 顶部导航 -->
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">◈</span>
+        <span class="brand-name">九州行</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#destinations">目的地</a>
+        <a href="#mapview">地图</a>
+        <a href="#routes">灵感路线</a>
+        <a href="cities.html">中国城市库</a>
+        <a href="route.html">路线导航</a>
+        <a href="hotel.html">酒店预订</a>
+        <a href="#planner">定制行程</a>
+        <a href="#stats">数据</a>
+        <a href="community.html">热门城市分享</a>
+        <button type="button" class="nav-link-btn" data-my-open>我的</button>
+      </nav>
+      <div class="nav-actions">
+        <a href="cities.html" class="btn-ghost btn-sm mobile-city-link">城市库</a>
+        <button id="themeToggle" class="icon-btn" aria-label="切换深色模式" title="切换深色模式">
+          <span class="icon-sun">☀</span><span class="icon-moon">☾</span>
+        </button>
+        <button id="qrOpen" class="btn-ghost btn-sm qr-nav-btn" title="手机扫码访问">📱 手机访问</button>
+        <button id="tripOpen" class="btn-ghost btn-sm trip-nav-btn">🧳 行程单 <span id="tripBadge" class="badge" hidden>0</span></button>
+        <button type="button" class="btn-ghost btn-sm my-mobile-btn" data-my-open>👤 我的</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="eyebrow">JOURNEY ACROSS CHINA</span>
+      <h1 class="hero-title">读懂中国山河<br/><span class="grad">规划下一段旅程</span></h1>
+      <p class="hero-sub">汇集全国 90 座城市与 9 个精选目的地，覆盖八大区域。智能搜索、地图探索、住宿参考与 AI 行程规划，一站式制定你的中国旅行方案。</p>
+      <div class="hero-cta">
+        <a href="#destinations" class="btn-accent">浏览目的地</a>
+        <button type="button" class="btn-ghost" data-open-ai>问 AI 推荐 →</button>
+      </div>
+      <div class="hero-stats">
+        <div class="hs"><b id="hsCount">90</b><span>城市目的地 · 9 个精选</span></div>
+        <div class="hs"><b id="hsCountries">8</b><span>旅行区域</span></div>
+        <div class="hs"><b id="hsAvg">4.7</b><span>平均评分</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="ring ring-1"></div>
+      <div class="ring ring-2"></div>
+      <div class="ring ring-3"></div>
+      <div class="float-card fc-1"><span>🏯</span><div><b>北京</b><span>¥3,580 / 5天</span></div></div>
+      <div class="float-card fc-2"><span>🏝️</span><div><b>三亚</b><span>¥3,880 / 5天</span></div></div>
+      <div class="float-card fc-3"><span>🐼</span><div><b>成都</b><span>¥2,680 / 4天</span></div></div>
+    </div>
+  </section>
+
+  <!-- 搜索筛选栏 -->
+  <section class="toolbar" id="destinations">
+    <div class="toolbar-inner">
+      <div class="search-box">
+        <span class="search-ico">⌕</span>
+        <input id="searchInput" type="text" placeholder="搜索中国城市、景区或旅行主题…" autocomplete="off" />
+        <button id="searchClear" class="search-clear" aria-label="清除">✕</button>
+      </div>
+      <div class="filters">
+        <select id="filterRegion" class="filter-sel"><option value="">全部地区</option></select>
+        <select id="filterTag" class="filter-sel"><option value="">全部主题</option></select>
+        <select id="sortSel" class="filter-sel">
+          <option value="popular">综合推荐</option>
+          <option value="priceAsc">价格 低→高</option>
+          <option value="priceDesc">价格 高→低</option>
+          <option value="ratingDesc">评分 高→低</option>
+          <option value="durationAsc">天数 短→长</option>
+        </select>
+        <div class="price-range">
+          <span class="pr-label">预算</span>
+          <div class="price-chips">
+            <button class="p-chip" data-p="1000">¥1千内</button>
+            <button class="p-chip" data-p="2000">¥2千内</button>
+            <button class="p-chip" data-p="5000">¥5千内</button>
+            <button class="p-chip active" data-p="10000">¥1万内</button>
+          </div>
+          <input id="priceMax" type="range" min="1000" max="10000" step="500" value="10000" />
+          <span id="priceMaxLabel" class="pr-val">¥10,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="result-bar" aria-live="polite"><span id="resultCount">9 / 90</span> 个结果</div>
+  </section>
+
+  <!-- 目的地卡片网格 -->
+  <main class="grid-wrap">
+    <div id="cardGrid" class="card-grid"></div>
+    <div id="loadMoreWrap" class="more-wrap" hidden></div>
+    <div id="emptyState" class="empty-state" hidden>
+      <span class="empty-ico">🧭</span>
+      <h3>没有找到匹配的目的地</h3>
+      <p>试试调整搜索关键词或筛选条件。</p>
+      <button id="resetFilters" class="btn-ghost">重置筛选</button>
+    </div>
+  </main>
+
+  <!-- 地图视图 -->
+  <section class="map-section" id="mapview">
+    <div class="section-head">
+      <span class="eyebrow">MAP EXPLORER</span>
+      <h2>在中国地图上探索</h2>
+      <p>点击标记查看目的地详情，红点为热门推荐。</p>
+    </div>
+    <div id="map" class="map-box"></div>
+  </section>
+
+  <!-- 灵感路线 -->
+  <section class="routes-section" id="routes">
+    <div class="section-head">
+      <span class="eyebrow">ROUTE INSPIRATION</span>
+      <h2>中国灵感路线 · 组合玩法</h2>
+      <p>选择推荐线路，或自己搭配起点、途经城市、终点和交通方式，生成专属路线。</p>
+    </div>
+    <form id="quickRouteForm" class="quick-route-builder">
+      <div class="quick-route-title"><b>快速自选路线</b><span>先选三个城市，再进入完整路线图调整</span></div>
+      <label>起点<select id="quickRouteFrom" aria-label="自选路线起点"></select></label>
+      <label>途经<select id="quickRouteVia" aria-label="自选路线途经城市"></select></label>
+      <label>终点<select id="quickRouteTo" aria-label="自选路线终点"></select></label>
+      <button type="submit">生成路线 →</button>
+    </form>
+    <div id="routeList" class="route-grid"></div>
+  </section>
+
+  <!-- 热门景点、社区视频与热搜 -->
+  <section class="hot-dashboard-section" id="stats">
+    <div class="hot-dashboard-head">
+      <div>
+        <span class="eyebrow">CHINA NOW · TREND RADAR</span>
+        <h2>正在流行</h2>
+        <p>从热门景点、真实社区影像和旅行搜索中发现下一站。</p>
+      </div>
+      <a href="community.html" class="hot-community-link">进入社区分享广场 <span>↗</span></a>
+    </div>
+    <div class="hot-dashboard">
+      <section class="hot-ranking-card">
+        <div class="hot-card-head">
+          <div><span>HOT DESTINATIONS</span><h3>热门景点排行榜</h3></div>
+          <small>点击景点查看介绍</small>
+        </div>
+        <div id="hotAttractionRank" class="hot-attraction-rank" aria-live="polite"></div>
+      </section>
+      <div class="hot-dashboard-side">
+        <section class="hot-community-card-panel">
+          <div class="hot-card-head light">
+            <div><span>COMMUNITY VIDEO</span><h3>社区热门视频</h3></div>
+            <a href="community.html">全部视频 →</a>
+          </div>
+          <div id="hotCommunityMedia" class="hot-community-media">
+            <div class="hot-loading">正在加载社区视频…</div>
+          </div>
+        </section>
+        <section class="hot-search-panel">
+          <div class="hot-card-head dark">
+            <div><span>SEARCH PULSE</span><h3>旅行热搜</h3></div>
+            <small>点击直接搜索</small>
+          </div>
+          <div id="hotSearchTags" class="hot-search-tags"></div>
+        </section>
+      </div>
+    </div>
+  </section>
+
+  <!-- 详情弹窗 -->
+  <div id="modal" class="modal" role="dialog" aria-modal="true" aria-label="目的地详情" hidden>
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card detail-modal">
+      <button class="modal-close" data-close aria-label="关闭">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- 行程定制向导（四步） -->
+  <div id="plannerModal" class="modal" role="dialog" aria-modal="true" aria-label="行程定制向导" hidden>
+    <div class="modal-backdrop" data-planner-close></div>
+    <div class="modal-card planner-card">
+      <button class="modal-close" data-planner-close aria-label="关闭">✕</button>
+      <div id="plannerBody"></div>
+    </div>
+  </div>
+
+  <!-- 我的账户中心 -->
+  <aside id="myPanel" class="my-panel" role="dialog" aria-modal="true" aria-label="我的旅行账户" hidden>
+    <div class="ai-header">
+      <div class="ai-title"><span class="my-header-avatar">👤</span><div><b>我的</b><span class="ai-status">旅行账户与个人记录</span></div></div>
+      <div class="my-header-actions">
+        <button id="mySettings" class="icon-btn my-settings-btn" aria-label="账户设置" title="账户设置">⚙</button>
+        <button id="myClose" class="icon-btn" aria-label="关闭我的账户">✕</button>
+      </div>
+    </div>
+    <div id="myBody" class="my-body"></div>
+  </aside>
+
+  <!-- AI 助手面板 -->
+  <aside id="aiPanel" class="ai-panel" role="dialog" aria-label="中国旅行助手" hidden>
+    <div class="ai-header">
+      <div class="ai-title"><span class="ai-avatar">✦</span><div><b>中国旅行助手</b><span id="aiStatus" class="ai-status" aria-live="polite">正在检测智能体服务…</span></div></div>
+      <button id="aiClose" class="icon-btn" aria-label="关闭">✕</button>
+    </div>
+    <div id="aiMessages" class="ai-messages"></div>
+    <div class="ai-quick">
+      <button class="chip" data-q="推荐适合亲子的目的地">亲子推荐</button>
+      <button class="chip" data-q="预算5000以内去哪好">5000以内</button>
+      <button class="chip" data-q="想看海去哪里">想看海</button>
+      <button class="chip" data-q="推荐历史文化名城">历史名城</button>
+    </div>
+    <form id="aiForm" class="ai-input">
+      <input id="aiText" type="text" aria-label="输入中国旅行问题" placeholder="问问 AI：去哪好？多少钱？几天？" autocomplete="off" />
+      <button type="submit" class="btn-accent btn-sm">发送</button>
+    </form>
+  </aside>
+  <!-- 我的行程单 -->
+  <aside id="tripPanel" class="trip-panel" hidden>
+    <div class="ai-header">
+      <div class="ai-title"><span class="ai-avatar">🧳</span><div><b>我的行程单</b><span class="ai-status">本地保存 · 自动汇总预算与天数</span></div></div>
+      <button id="tripClose" class="icon-btn" aria-label="关闭">✕</button>
+    </div>
+    <div id="tripBody" class="trip-body"></div>
+    <div class="trip-foot">
+      <button id="tripRoute" class="btn-accent btn-sm" style="flex:1;justify-content:center">🗺 规划路线</button>
+      <button id="tripCopy" class="btn-ghost btn-sm" style="flex:1;justify-content:center">📋 复制文本</button>
+      <button id="tripClear" class="btn-ghost btn-sm">清空</button>
+    </div>
+  </aside>
+
+  <!-- 路线规划（参考高德地图） -->
+  <div id="routeModal" class="modal" role="dialog" aria-modal="true" aria-label="路线规划" hidden>
+    <div class="modal-backdrop" data-route-close></div>
+    <div class="modal-card route-card">
+      <button class="modal-close" data-route-close aria-label="关闭">✕</button>
+      <div class="rp-head">
+        <span class="rp-avatar">🗺</span>
+        <div><b>出行路线规划</b><span class="rp-sub">参考高德地图 · 交通方式 / 耗时 / 费用估算</span></div>
+      </div>
+      <div id="routeBody" class="rp-body"></div>
+    </div>
+  </div>
+  <button id="aiFab" class="ai-fab" aria-label="打开 AI 助手">✦</button>
+  <button id="tripFab" class="trip-fab" aria-label="打开行程单">🧳</button>
+
+  <!-- 手机扫码访问 -->
+  <div id="qrModal" class="modal" role="dialog" aria-modal="true" aria-label="手机扫码访问" hidden>
+    <div class="modal-backdrop" data-qr-close></div>
+    <div class="modal-card qr-card">
+      <button class="modal-close" data-qr-close aria-label="关闭">✕</button>
+      <div class="qr-body">
+        <h3>📱 手机扫码 · 直接访问</h3>
+        <div id="qrCanvas" class="qr-canvas" aria-label="手机访问二维码"></div>
+        <p class="qr-url" id="qrUrl"></p>
+        <p class="qr-tip">手机需与电脑连接同一个 WiFi<br/>在浏览器直接打开即可，无需安装任何 App</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+  <!-- 脚注 -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-brand"><span class="brand-mark">◈</span> 九州行</div>
+      <p>用代码读懂中国山河 · 本站为纯前端旅行规划演示项目，数据内置。</p>
+      <p class="footer-tech">HTML · CSS · Leaflet · 本地智能推荐</p>
+    </div>
+  </footer>
+
+  <script src="js/vendor/leaflet.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/city-catalog.js"></script>
+  <script src="js/photos.js"></script>
+  <script src="js/costs.js"></script>
+  <script src="js/static-api.js"></script>
+  <script src="js/ai-assistant.js"></script>
+  <script src="js/scenic-detail.js"></script>
+  <script src="js/vendor/qrcode.min.js"></script>
+  <script src="app-config.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/companion.js"></script>
+</body>
+</html>

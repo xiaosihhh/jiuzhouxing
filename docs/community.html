@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob: https://*.myhuaweicloud.com; media-src 'self' blob: data: https://*.myhuaweicloud.com; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>热门城市分享 · 九州行</title>
+  <meta name="description" content="分享热门城市旅行照片、视频与故事，发现真实旅行体验。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">◈</span><span class="brand-name">九州行</span></a>
+      <nav class="nav-links">
+        <a href="index.html#destinations">精选目的地</a>
+        <a href="cities.html">中国城市库</a>
+        <a href="route.html">路线导航</a>
+        <a href="hotel.html">酒店探索</a>
+        <a href="community.html" class="active">热门城市分享</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="切换深色模式" title="切换深色模式"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="index.html?my=1" class="btn-ghost btn-sm">👤 我的</a>
+        <a href="index.html" class="btn-accent btn-sm community-home-btn">返回主页 →</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="community-hero" id="top">
+    <div class="community-hero-glow"></div>
+    <div class="community-hero-inner">
+      <div>
+        <span class="eyebrow">TRAVEL STORIES · REAL MOMENTS</span>
+        <h1>热门城市分享<br/><span class="grad">看见旅途里的真实中国</span></h1>
+        <p>上传你在城市旅行中的照片、视频与故事。点赞、收藏和评价喜欢的分享，让下一段旅程从真实体验开始。</p>
+        <div class="community-hero-actions">
+          <button id="communityCreate" class="btn-accent" type="button">＋ 发布我的分享</button>
+          <a href="#communityFeedWrap" class="btn-ghost">逛逛大家的故事</a>
+        </div>
+      </div>
+      <div class="community-hero-art" aria-hidden="true">
+        <div class="community-float-card fc-city-a"><span>🏯</span><b>北京</b><small>故宫的午后</small></div>
+        <div class="community-float-card fc-city-b"><span>🐼</span><b>成都</b><small>慢生活指南</small></div>
+        <div class="community-float-card fc-city-c"><span>🌊</span><b>三亚</b><small>海风来信</small></div>
+        <div class="community-orbit"><span>✦</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="community-toolbar">
+    <div class="community-toolbar-inner">
+      <div class="community-sort" role="tablist" aria-label="分享排序">
+        <button type="button" class="active" data-sort="hot" aria-selected="true">🔥 热门</button>
+        <button type="button" data-sort="new" aria-selected="false">🕘 最新</button>
+      </div>
+      <select id="communityCity" class="filter-sel" aria-label="选择城市">
+        <option value="">全部城市</option>
+      </select>
+      <span id="communityCount" class="community-count">正在加载分享…</span>
+    </div>
+  </section>
+
+  <main id="communityFeedWrap" class="community-feed-wrap">
+    <div id="communityFeed" class="community-feed" aria-live="polite">
+      <div class="community-loading"><span>◈</span><p>正在发现大家的旅行故事…</p></div>
+    </div>
+    <div id="communityEmpty" class="community-empty" hidden>
+      <span>📷</span>
+      <h2>这里还没有旅行分享</h2>
+      <p>成为第一个分享热门城市旅行故事的人吧。</p>
+      <button type="button" class="btn-accent" data-open-share>发布第一条分享</button>
+    </div>
+  </main>
+
+  <button id="aiFab" class="ai-fab" type="button" aria-label="打开中国旅行助手">✦</button>
+  <aside id="aiPanel" class="ai-panel" role="dialog" aria-label="中国旅行助手" hidden>
+    <div class="ai-header">
+      <div class="ai-title"><span class="ai-avatar">✦</span><div><b>中国旅行助手</b><span id="aiStatus" class="ai-status" aria-live="polite">正在检测智能体服务…</span></div></div>
+      <button id="aiClose" class="icon-btn" type="button" aria-label="关闭">✕</button>
+    </div>
+    <div id="aiMessages" class="ai-messages"></div>
+    <div class="ai-quick">
+      <button class="chip" type="button" data-q="推荐适合秋天的旅行城市">秋日推荐</button>
+      <button class="chip" type="button" data-q="预算5000以内去哪好">5000元预算</button>
+      <button class="chip" type="button" data-q="推荐三天亲子旅行">亲子三天</button>
+      <button class="chip" type="button" data-q="哪些城市适合拍照">拍照城市</button>
+    </div>
+    <form id="aiForm" class="ai-input">
+      <input id="aiText" type="text" aria-label="输入中国旅行问题" placeholder="问问 AI：去哪好？怎么安排？" autocomplete="off" />
+      <button type="submit" class="btn-accent btn-sm">发送</button>
+    </form>
+  </aside>
+
+  <div id="shareModal" class="modal community-modal" role="dialog" aria-modal="true" aria-label="发布城市分享" hidden>
+    <div class="modal-backdrop" data-share-close></div>
+    <div class="modal-card community-compose-card">
+      <button class="modal-close" type="button" data-share-close aria-label="关闭">✕</button>
+      <div class="community-compose-head">
+        <span class="community-compose-icon">✦</span>
+        <div><h2>分享一座城市</h2><p>记录真实照片、视频与旅途故事</p></div>
+      </div>
+      <form id="shareForm" class="community-compose-form" novalidate>
+        <label for="shareCity">热门城市</label>
+        <select id="shareCity" name="city" class="filter-sel" required></select>
+        <label for="shareCaption">旅行配文</label>
+        <textarea id="shareCaption" name="caption" maxlength="1200" rows="5" placeholder="写下这趟旅行里最难忘的瞬间…" required></textarea>
+        <label for="shareMedia">照片或视频</label>
+        <label class="community-upload-box" for="shareMedia">
+          <span>＋</span>
+          <b>选择旅行照片 / 视频</b>
+          <small>最多 4 个文件，支持 JPG、PNG、WebP、GIF、MP4、WebM、MOV，总大小不超过 32 MB</small>
+          <input id="shareMedia" name="media" type="file" accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime" multiple />
+        </label>
+        <div id="sharePreview" class="community-preview" hidden></div>
+        <div id="shareError" class="my-form-error" hidden></div>
+        <div class="community-compose-foot">
+          <small>发布即表示内容由你本人上传，请尊重他人隐私与版权。</small>
+          <button id="shareSubmit" type="submit" class="btn-accent">发布分享</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div id="communityAuthModal" class="modal" role="dialog" aria-modal="true" aria-label="登录后参与分享" hidden>
+    <div class="modal-backdrop" data-auth-close></div>
+    <div class="modal-card community-auth-card">
+      <button class="modal-close" type="button" data-auth-close aria-label="关闭">✕</button>
+      <span class="community-auth-icon">👤</span>
+      <h2>登录后参与旅行分享</h2>
+      <p>登录九州行账号后，可以上传分享、点赞、收藏和评价。</p>
+      <a class="btn-accent" href="index.html?my=1">前往“我的”登录 →</a>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="footer">
+    <p>九州行 · 热门城市分享 — 记录旅途，也尊重每一份真实体验</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/city-catalog.js"></script>
+  <script src="js/static-api.js"></script>
+  <script src="js/ai-assistant.js"></script>
+  <script src="js/community-app.js"></script>
+  <script src="js/community-ai.js"></script>
+  <script src="js/companion.js"></script>
+</body>
+</html>

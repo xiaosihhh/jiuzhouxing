@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; object-src 'none'; base-uri 'self'; form-action 'self'" />
+  <title>酒店探索 · 九州行</title>
+  <meta name="description" content="按目的地、预算和旅行偏好探索九州行示范酒店。" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-mark">◈</span><span class="brand-name">九州行</span></a>
+      <nav class="nav-links">
+        <a href="index.html#destinations">精选目的地</a>
+        <a href="cities.html">中国城市库</a>
+        <a href="route.html">路线导航</a>
+        <a href="hotel.html" class="active">酒店探索</a>
+        <a href="community.html">热门城市分享</a>
+      </nav>
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="切换深色模式" title="切换深色模式"><span class="icon-sun">☀</span><span class="icon-moon">☾</span></button>
+        <a href="index.html" class="btn-accent btn-sm">返回主页 →</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero ch-hero hotel-hero" id="top">
+    <div class="hero-glow"></div>
+    <div class="hero-content">
+      <span class="eyebrow">STAY &amp; EXPLORE</span>
+      <h1 class="hero-title">住进风景里<br/><span class="grad">找到旅途中的好住处</span></h1>
+      <p class="hero-sub">覆盖全国 90 座城市，按目的地、价格和旅行偏好查看住宿建议；选择城市后可直接跳转携程查询实时房价。</p>
+      <div class="hero-cta">
+        <a href="#hotels" class="btn-accent">开始探索</a>
+        <a href="route.html" class="btn-ghost">规划路线 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="hotel-toolbar" id="hotels">
+    <div class="hotel-tools-inner">
+      <div class="hotel-search">
+        <span aria-hidden="true">⌕</span>
+        <input id="hotelSearch" type="search" placeholder="搜索酒店、城区或偏好，如：亲子、海景" autocomplete="off" />
+      </div>
+      <select id="hotelCity" class="filter-sel" aria-label="目的地"></select>
+      <select id="hotelSort" class="filter-sel" aria-label="排序方式">
+        <option value="recommended">综合推荐</option>
+        <option value="priceAsc">价格从低到高</option>
+        <option value="ratingDesc">评分优先</option>
+      </select>
+      <button id="hotelCtrip" class="hotel-ctrip-btn" type="button">🏨 携程搜索 ↗</button>
+      <span id="hotelCount" class="hotel-count">…</span>
+    </div>
+  </section>
+
+  <main class="hotel-body">
+    <div id="hotelGrid" class="hotel-grid"></div>
+    <div id="hotelMore" class="hotel-more" hidden></div>
+    <div id="hotelEmpty" class="empty-state" hidden>
+      <span class="empty-ico">🏨</span>
+      <h3>没有找到匹配酒店</h3>
+      <p>试试更换目的地或减少搜索关键词。</p>
+      <button id="hotelReset" class="btn-ghost" type="button">重置筛选</button>
+    </div>
+  </main>
+
+  <div id="hotelModal" class="modal" role="dialog" aria-modal="true" aria-label="酒店详情" hidden>
+    <div class="modal-backdrop" data-hotel-close></div>
+    <div class="modal-card hotel-modal-card">
+      <button class="modal-close" data-hotel-close aria-label="关闭">✕</button>
+      <div id="hotelModalBody"></div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <footer class="footer">
+    <p>九州行 · 酒店探索 — 示范房源与参考价格，不代表实时房态或可订价格</p>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script src="js/cities.js"></script>
+  <script src="js/city-catalog.js"></script>
+  <script src="js/static-api.js"></script>
+  <script src="js/hotels.js"></script>
+  <script src="js/hotel-app.js"></script>
+  <script src="js/companion.js"></script>
+</body>
+</html>
