@@ -19,6 +19,7 @@ temp/
 tmp/
 tmp-*
 *.tmp
+~$*
 .cache/
 coverage/
 __pycache__/
