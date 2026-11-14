@@ -1,6 +1,7 @@
 "use strict";
 
 const { catalog } = require("./catalog");
+const travelPlanner = require("../js/travel-planner");
 
 const REGIONS = ["华北", "华东", "华南", "华中", "西南", "西北", "东北", "港澳台"];
 const PREFERENCE_TAGS = {
@@ -187,17 +188,17 @@ function estimateBudget(constraints, candidates) {
 function composeItineraryDraft(constraints, candidates) {
   const city = candidates[0];
   if (!city) return [];
-  const highlights = city.highlights.length ? city.highlights : ["城市地标", "当地美食", "特色街区"];
-  const days = Math.min(7, constraints.days);
-  return Array.from({ length: days }, (_, index) => ({
-    day: index + 1,
-    city: city.name,
-    items: [
-      highlights[(index * 2) % highlights.length],
-      highlights[(index * 2 + 1) % highlights.length],
-      index === 0 ? "抵达与酒店入住" : index === days - 1 ? "机动时间与返程准备" : "当地餐饮与自由活动"
-    ]
-  }));
+  const preference = constraints.preferences || [];
+  const mode = preference.includes("亲子")
+    ? "family"
+    : preference.includes("历史")
+      ? "culture"
+      : preference.includes("美食")
+        ? "food"
+        : preference.includes("摄影")
+          ? "photo"
+          : "classic";
+  return travelPlanner.buildItinerary(city, constraints.days, mode);
 }
 
 function buildBookingHandoff(constraints, candidates) {

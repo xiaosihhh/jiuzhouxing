@@ -169,19 +169,29 @@
     return String(value || "").replace(/\u0000/g, "").trim().slice(0, max);
   }
 
-  function staticPlan(question) {
+  function staticPlan(question, history = []) {
     const answer = window.AI?.answer
-      ? window.AI.answer(question)
+      ? window.AI.answer(question, history)
       : { text: "当前为 GitHub Pages 静态演示版，可使用地点、路线与社区功能。", cards: [] };
     const cards = Array.isArray(answer.cards) ? answer.cards : [];
     return {
       reply: answer.text,
-      recommendations: cards.map(city => ({ id: city.id, reason: city.description || "静态推荐" })),
-      itinerary: cards.slice(0, 3).map((city, index) => ({
-        day: index + 1,
-        city: city.name,
-        items: (city.highlights || []).slice(0, 3)
+      recommendations: cards.map(city => ({
+        id: city.id,
+        reason: city.description || "静态推荐",
+        days: city.planDays,
+        price: city.planPrice,
+        variant: city.planVariant
       })),
+      itinerary: Array.isArray(answer.itinerary) && answer.itinerary.length
+        ? answer.itinerary
+        : cards.slice(0, 3).map((city, index) => ({
+            day: index + 1,
+            city: city.name,
+            items: (city.highlights || []).slice(0, 3)
+          })),
+      intent: answer.intent || null,
+      variants: answer.variants || [],
       skills: [
         { name: "意图解析" },
         { name: "目的地检索" },
@@ -217,7 +227,7 @@
       const body = await bodyOf(options);
       const message = clean(body.message, 2000);
       if (!message) return json({ error: "message is required" }, 400);
-      return json(staticPlan(message));
+      return json(staticPlan(message, Array.isArray(body.history) ? body.history : []));
     }
 
     if (path === "/api/auth/code" && method === "POST") {

@@ -1,6 +1,7 @@
 /* ===== AI 旅行助手 · 本地智能引擎 ===== */
 const AI = (function(){
   const data = () => window.ALL_CITY_DESTINATIONS || window.TRAVEL_DATA || [];
+  const planner = () => window.JZTravelPlanner;
   const fmt = n => "¥" + n.toLocaleString();
 
   function pick(q){
@@ -33,13 +34,13 @@ const AI = (function(){
 
     let pool = filters.length ? d.filter(x=>filters.every(f=>f(x))) : d.slice();
     if(!pool.length&&direct) pool=[direct];
-    const m = s.match(/(\d+)\s*(天|日)/);
-    if(m){ const days=+m[1]; pool=pool.filter(x=>x.duration<=days+1); }
-    const bm = s.match(/(?:预算\s*(\d[\d,]*)|(\d[\d,]*)\s*(?:以内|以下|块钱|元|内))/);
-    if(bm){ const budget=+(bm[1]||bm[2]).replace(/,/g,""); pool=pool.filter(x=>x.price<=budget); }
+    const parsedDays=planner()?.parseDays(q);
+    const parsedBudget=planner()?.parseBudget(q);
+    if(parsedDays){ pool=pool.filter(x=>x.duration<=parsedDays+1); }
+    if(parsedBudget){ pool=pool.filter(x=>x.price<=parsedBudget); }
     if(!pool.length&&direct) pool=[direct];
     const genericIntent=has("推荐","去哪","好玩","周末","放松","选择","便宜","省钱","性价比","低价","评分","好评","最好","最佳");
-    if(!filters.length&&!m&&!bm&&!genericIntent) return [];
+    if(!filters.length&&!parsedDays&&!parsedBudget&&!genericIntent) return [];
 
     if(has("便宜","省钱","性价比","低价"))
       pool = pool.slice().sort((a,b)=>a.price-b.price);
@@ -51,10 +52,12 @@ const AI = (function(){
     return pool.slice(0,4);
   }
 
-  function answer(q){
+  function answer(q,history){
     const d = data();
     const s = q.toLowerCase();
     const has = (...k)=>k.some(t=>s.includes(t));
+    const specific=planner()?.plan(q,d,history);
+    if(specific) return specific;
     if(/^(你好|您好|嗨|哈喽|hello|hi)[！!。,.，\s]*$/i.test(s)){
       return {text:"你好！我是九州行旅行助手。你可以直接告诉我目的地、预算、天数或偏好，例如“成都3天2000内”“想看海去哪里”。",cards:d.filter(x=>x.popular).slice(0,3)};
     }
@@ -81,11 +84,11 @@ const AI = (function(){
     else if(has("便宜","省钱","性价比")) intro="高性价比之选，花得少玩得好：";
     else if(has("推荐","最好","最佳")) intro="为你推荐口碑最佳的目的地：";
 
-    const bm = s.match(/(?:预算\s*(\d[\d,]*)|(\d[\d,]*)\s*(?:以内|以下|块钱|元|内))/);
-    const m = s.match(/(\d+)\s*(天|日)/);
+    const parsedBudget=planner()?.parseBudget(q);
+    const parsedDays=planner()?.parseDays(q);
     let tip = "";
-    if(bm) tip += ` 预算约 ${fmt(+(bm[1]||bm[2]).replace(/,/g,""))} 以内`;
-    if(m) tip += ` 行程 ${m[1]} 天左右`;
+    if(parsedBudget) tip += ` 预算约 ${fmt(parsedBudget)} 以内`;
+    if(parsedDays) tip += ` 行程 ${parsedDays} 天左右`;
     const avg = (results.reduce((a,x)=>a+x.price,0)/results.length).toFixed(0);
     const direct = s.includes(results[0].name.toLowerCase())||s.includes(results[0].city.toLowerCase());
     const highlightText = direct&&Array.isArray(results[0].highlights)&&results[0].highlights.length
@@ -101,6 +104,10 @@ const AI = (function(){
     return {text:"你好！我是中国旅行助手 ✦\n告诉我你的偏好，我来帮你规划国内旅行。比如：\n• “预算5000去哪好”\n• “想看海”\n• “推荐历史文化名城”\n• “7天行程，亲子游”", cards:top};
   }
 
-  return { answer, greet };
+  return {
+    answer,
+    plan:(q,history)=>planner()?.plan(q,data(),history) || null,
+    greet
+  };
 })();
 window.AI = AI;

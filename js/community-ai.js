@@ -56,7 +56,7 @@
       const button=document.createElement("button");
       button.type="button";
       button.className="msg-card";
-      button.innerHTML=`<img src="assets/cities/${encodeURIComponent(city.city||city.name)}.webp" alt=""/><div><b>${city.name}</b><br/><span>¥${city.price.toLocaleString()} · ${city.duration}天 · ★${city.rating}</span>${card.reason?`<small>${city.description} ${card.reason}</small>`:""}</div>`;
+      button.innerHTML=`<img src="assets/cities/${encodeURIComponent(city.city||city.name)}.webp" alt=""/><div><b>${city.name}</b><br/><span>¥${(card.price||city.price).toLocaleString()} · ${card.days||city.duration}天 · ★${city.rating}</span>${card.reason?`<small>${city.description} ${card.reason}</small>`:""}</div>`;
       button.addEventListener("click",()=>{location.href="index.html?city="+encodeURIComponent(city.name);});
       wrap.appendChild(button);
     });
@@ -71,7 +71,7 @@
     return items.map(day=>`第 ${day.day} 天 · ${day.city}\n${(day.items||[]).map(item=>"· "+item).join("\n")}`).join("\n\n");
   }
   function addLocalAnswer(question){
-    const answer=window.AI&&window.AI.answer?window.AI.answer(question):{text:"当前为本地旅行助手，可以告诉我目的地、天数或预算。",cards:[]};
+    const answer=window.AI&&window.AI.answer?window.AI.answer(question,history.slice(-8,-1)):{text:"当前为本地旅行助手，可以告诉我目的地、天数或预算。",cards:[]};
     addMessage(answer.text,"bot",answer.cards,"本地推荐引擎");
     history.push({role:"assistant",content:answer.text});
     if(history.length>16)history.splice(0,history.length-16);

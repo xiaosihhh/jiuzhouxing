@@ -1318,7 +1318,7 @@ $("#resetFilters").addEventListener("click", ()=>{
         const card = document.createElement("button");
         card.type="button";
         card.className="msg-card";
-        card.innerHTML = `<img src="${cover(c,120,120)}" alt="${esc(c.name)}"/><div><b>${esc(c.name)}</b><br/><span>${fmt(c.price)} · ${c.duration}天 · ★${c.rating}</span>${c.reason?`<small>${esc(c.reason)}</small>`:""}</div>`;
+        card.innerHTML = `<img src="${cover(c,120,120)}" alt="${esc(c.name)}"/><div><b>${esc(c.name)}</b><br/><span>${fmt(c.planPrice||c.price)} · ${c.planDays||c.days||c.duration}天 · ★${c.rating}</span>${c.reason?`<small>${esc(c.reason)}</small>`:""}</div>`;
         card.addEventListener("click",()=>{openModal(c.id);});
         div.appendChild(card);
       });
@@ -1355,9 +1355,10 @@ $("#resetFilters").addEventListener("click", ()=>{
 
   function cloudAnswer(payload){
     const cards=(payload.recommendations||[]).map(item=>{
+      const extra=item&&typeof item==="object"?item:{};
       const id=typeof item==="string"?item:item.id;
       const d=data.find(x=>x.id===id);
-      return d?{...d,reason:(item&&item.reason)||""}:null;
+      return d?{...d,...extra,reason:(item&&item.reason)||""}:null;
     }).filter(Boolean);
     let text=payload.reply||"已根据你的需求生成推荐。";
     if(Array.isArray(payload.itinerary)&&payload.itinerary.length&&!/(第1天|Day\s*1|D1\b)/i.test(text)){
@@ -1406,7 +1407,7 @@ $("#resetFilters").addEventListener("click", ()=>{
     }
     if(!result){
       await new Promise(resolve=>setTimeout(resolve,260));
-      const local=window.AI.answer(q);
+      const local=window.AI.answer(q,previous);
       result={...local,source:"本地推荐引擎"};
     }
     loading.remove();
