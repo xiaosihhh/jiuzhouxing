@@ -9,6 +9,7 @@ data/users.json
 data/conversations.jsonl
 data/trips.json
 data/huawei-network.json
+data/huawei-provisioning.json
 *.log
 
 # Local versions, caches and temporary files
