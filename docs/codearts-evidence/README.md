@@ -2,38 +2,34 @@
 
 本目录用于保存华为云码道 CodeArts 代码智能体参与项目开发的佐证材料。
 
-## 已有证据
+## 正式文档
 
-### 20261114-codearts-ide-agentarts.png
+- `CodeArts使用记录说明-WPS.docx`：WPS 中完成的正式可编辑版本。
+- `CodeArts使用记录说明-WPS.pdf`：WPS 导出的 15 页 PDF。
+- `CodeArts使用记录说明.docx`：自动生成的可编辑备份。
+- `CodeArts使用记录说明.pdf`：浏览器打印版备份。
+- `CodeArts使用记录说明.md`：纯文本版本。
+- `证据总览.png`：10 张证据的缩略总览。
 
-证明内容：
+## 已选证据
 
-- IDE 识别项目 `demo` 与全部源码、截图文件。
-- 界面底部明确显示“华为云码道CodeArts代码智能体”。
-- 智能体模型状态为 `DeepSeek V4.1 Flash High`。
-- 浏览器同时打开华为云 AgentArts Managed Agents 控制台。
-- 控制台可看到智能体 `agent-nev8iia0`、运行环境和创建时间。
+1. `01-需求-路线规划开发指令.png`：路线规划需求与智能体完成结果。
+2. `02-需求-AgentArts创建入口.png`：华为云 AgentArts 创建流程。
+3. `03-执行-AgentArts智能体列表.png`：托管智能体创建记录。
+4. `04-执行-AgentArts运行拓扑.png`：运行时、模型和知识库拓扑。
+5. `05-执行-AgentArts环境配置.png`：环境与 Agent 关联状态。
+6. `06-代码-CodeArts开发环境.png`：CodeArts IDE、项目源码与 AgentArts 控制台。
+7. `07-代码-Git变更与Skills.png`：Git 提交、文件统计和旅行 Skills 代码。
+8. `08-测试-自动化检查通过.png`：项目、数据、比赛审计和健康检查结果。
+9. `09-成果-首页.png`：最终首页成果。
+10. `10-成果-路线规划.png`：最终路线规划页面。
 
-这属于“开发环境与云服务接入证明”，建议作为证据册第一页。
+## 证据组织方式
 
-## 仍需补充的证据
+- 需求：01–02
+- 智能体执行：03–05
+- 代码变更：06–07
+- 测试结果：08
+- 最终交付：09–10
 
-1. 至少 3 次 CodeArts 开发对话，包含需求、智能体执行过程和完成结果。
-2. 代码修改前后文件列表或代码差异截图。
-3. 测试通过的终端输出，例如 `node tools/check-project.js` 和健康检查结果。
-4. AgentArts Skill 执行记录和 Runtime 调用记录。
-5. OBS、RDS、DCS 控制台截图；RDS/DCS 未完成前不得标注为已接入。
-6. 页面预览和最终部署验收截图。
-
-## 推荐命名
-
-```text
-20261114-01-codearts-environment.png
-20261114-02-route-agent-request.png
-20261114-03-route-agent-result.png
-20261114-04-code-change.png
-20261114-05-test-passed.png
-20261114-06-agentarts-trace.png
-```
-
-所有截图应保留完整浏览器或 IDE 边界，并隐藏手机号、AK/SK、API Key 和账单个人信息。
+正式提交前仍应补充真实的 RDS、DCS、公网部署和原始 CodeArts 会话导出；未完成的项目不得写成已上线。

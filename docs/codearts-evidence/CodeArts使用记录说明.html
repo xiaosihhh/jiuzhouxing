@@ -1,0 +1,46 @@
+<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'>
+<title>CodeArts 使用记录说明</title><style>
+@page{size:A4;margin:16mm}
+body{font-family:'Microsoft YaHei',sans-serif;color:#1e293b;line-height:1.75;margin:0}
+.cover{text-align:center;padding-top:50mm}
+.cover h1{font-size:34px;color:#081931;margin-bottom:8px}
+.cover h2{font-size:18px;color:#0f766e;font-weight:500}
+.summary{margin:28px 0;padding:18px 22px;background:#f1f8f7;border-left:5px solid #0f766e}
+h1{font-size:25px;color:#081931;border-bottom:2px solid #dce7ef;padding-bottom:6px}
+h2{font-size:19px;color:#0f766e;margin-top:28px}
+.evidence{page-break-inside:avoid;margin:24px 0 38px}
+.evidence img{display:block;max-width:100%;max-height:190mm;margin:0 auto;border:1px solid #d6e0e8;border-radius:8px;box-shadow:0 8px 20px rgba(15,23,42,.10)}
+.caption{text-align:center;font-size:12px;color:#475569;margin-top:8px}
+.phase{page-break-before:always}
+.note{font-size:12px;color:#64748b}
+</style></head><body>
+<div class='cover'><h1>CodeArts 使用记录说明</h1>
+<h2>九州行 · 中国旅行规划平台<br>第十一届华为 ICT 大赛创新赛</h2>
+<p>2026-11-14</p></div>
+<div class='summary'><b>记录说明：</b>
+本项目在开发、智能体接入、页面迭代、接口调试和验收过程中使用华为云码道 CodeArts 代码智能体，并结合项目级 Skills、AgentArts Managed Agent、OBS 与自动化测试完成交付。
+以下材料按“需求 → 智能体执行 → 代码变更 → 测试结果”组织，并补充最终交付页面。</div>
+<div class='phase'><h1>需求记录</h1>
+<div class='evidence'><h2>01-需求-路线规划开发指令.png</h2><img src='01-需求-路线规划开发指令.png' alt='01-需求-路线规划开发指令.png'><div class='caption'>用户提出路线规划、交通方式、耗时和费用估算需求，智能体返回完成结果。</div></div>
+<div class='evidence'><h2>02-需求-AgentArts创建入口.png</h2><img src='02-需求-AgentArts创建入口.png' alt='02-需求-AgentArts创建入口.png'><div class='caption'>在华为云 AgentArts 中创建托管智能体，进入模型、提示词和环境配置流程。</div></div>
+</div>
+<div class='phase'><h1>智能体执行记录</h1>
+<div class='evidence'><h2>03-执行-AgentArts智能体列表.png</h2><img src='03-执行-AgentArts智能体列表.png' alt='03-执行-AgentArts智能体列表.png'><div class='caption'>AgentArts 控制台显示已创建的智能体及其创建时间。</div></div>
+<div class='evidence'><h2>04-执行-AgentArts运行拓扑.png</h2><img src='04-执行-AgentArts运行拓扑.png' alt='04-执行-AgentArts运行拓扑.png'><div class='caption'>展示 Managed Agent、运行时、模型、浏览器和知识库之间的运行关系。</div></div>
+<div class='evidence'><h2>05-执行-AgentArts环境配置.png</h2><img src='05-执行-AgentArts环境配置.png' alt='05-执行-AgentArts环境配置.png'><div class='caption'>展示 AgentArts 托管环境、Agent 关联和运行状态。</div></div>
+</div>
+<div class='phase'><h1>代码变更记录</h1>
+<div class='evidence'><h2>06-代码-CodeArts开发环境.png</h2><img src='06-代码-CodeArts开发环境.png' alt='06-代码-CodeArts开发环境.png'><div class='caption'>IDE 同时展示项目源码、截图资源和华为云 AgentArts 控制台，底部明确显示“华为云码道CodeArts代码智能体”。</div></div>
+<div class='evidence'><h2>07-代码-Git变更与Skills.png</h2><img src='07-代码-Git变更与Skills.png' alt='07-代码-Git变更与Skills.png'><div class='caption'>展示 Git 提交、变更文件统计和 six travel Skills 的实际实现代码。</div></div>
+</div>
+<div class='phase'><h1>测试结果</h1>
+<div class='evidence'><h2>08-测试-自动化检查通过.png</h2><img src='08-测试-自动化检查通过.png' alt='08-测试-自动化检查通过.png'><div class='caption'>项目结构、数据、比赛就绪度和运行健康检查结果。</div></div>
+</div>
+<div class='phase'><h1>最终交付页面</h1>
+<div class='evidence'><h2>09-成果-首页.png</h2><img src='09-成果-首页.png' alt='09-成果-首页.png'><div class='caption'>首页最终版本，包含 AI 助手、目的地、地图、路线、酒店和社区入口。</div></div>
+<div class='evidence'><h2>10-成果-路线规划.png</h2><img src='10-成果-路线规划.png' alt='10-成果-路线规划.png'><div class='caption'>最终路线规划页面，支持起终点、途经城市、交通方式和路线生成。</div></div>
+</div>
+<div class='phase'><h1>使用边界说明</h1>
+<p>本说明用于证明 CodeArts 参与了项目开发和迭代，不替代比赛要求的设计文档、部署证明或运行日志。</p>
+<p class='note'>正式提交前应补齐 RDS、DCS 和公网部署证据；未完成的项目不得写成已上线。截图均隐藏云服务 AK/SK、API Key、手机号和个人账号信息。</p></div>
+</body></html>
